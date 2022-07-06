@@ -1,5 +1,61 @@
-h1 {
-    color: red;
-    display: flex;
-    justify-content: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+.container {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Start css frame big slogan image */
+.slogan-image-frame {
+    height: 14rem;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+}
+
+.slogan-image-frame .slogan-image {
+    height: 100%;
+    width: 100%;
+}
+/* End css frame big slogan image */
+
+/* Start css Toggle switch */
+.toggle-switch {
+    width: auto !important;
+    border-bottom: 1px solid #e6e6e6;
+    background: #908677;
+}
+
+.toggle-switch #nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 200px;
+}
+
+.toggle-switch #nav li {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.toggle-switch #nav li a:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #979797;
+    background: #ddb47a;
+    color: #000;
+}
+
+.toggle-switch #nav li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 50px;
+    padding: 13px 100px 13px 100px;
+}
+
+/* End css Toggle switch */
