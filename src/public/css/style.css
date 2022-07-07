@@ -11,7 +11,7 @@
 
 /* Start css frame big slogan image */
 .slogan-image-frame {
-    height: 14rem;
+    height: 18rem;
     border-bottom: 1px solid #e6e6e6;
     padding: 0;
 }
@@ -19,6 +19,25 @@
 .slogan-image-frame .slogan-image {
     height: 100%;
     width: 100%;
+    animation: changeImages 18s infinite;
+}
+
+@keyframes changeImages {
+    0% {
+        background-image: url("/img/slogan-image1.jpg");
+    }
+    25% {
+        background-image: url("/img/slogan-image2.jpg");
+    }
+    50% {
+        background-image: url("/img/slogan-image3.jpg");
+    }
+    75% {
+        background-image: url("/img/slogan-image4.jpg");
+    }
+    100% {
+        background-image: url("/img/slogan-image5.jpg");
+    }
 }
 /* End css frame big slogan image */
 
@@ -26,7 +45,7 @@
 .toggle-switch {
     width: auto !important;
     border-bottom: 1px solid #e6e6e6;
-    background: #908677;
+    background: #e4d3bb;
 }
 
 .toggle-switch #nav {
@@ -45,8 +64,8 @@
 .toggle-switch #nav li:hover > a {
     cursor: pointer;
     border-bottom: 1px solid #979797;
-    background: #ddb47a;
-    color: #000;
+    background: #bca27e;
+    color: #fff;
 }
 
 .toggle-switch #nav li:hover .subnav {
@@ -55,7 +74,7 @@
 
 .toggle-switch #nav > li > a {
     position: relative;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 18px;
     line-height: 50px;
@@ -68,16 +87,36 @@
 
 #nav .subnav {
     position: absolute;
-    background: #a79b8a;
+    background: #e4d3bb;
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
     display: none;
 }
 
 #nav .subnav > li > a {
+    position: relative;
     color: #000;
     padding: 14px 98px 14px 98px;
-    color: #fff;
     text-decoration: none;
     line-height: 50px;
+}
+
+#nav .arrow {
+    position: absolute;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    top: 20px;
+    right: 80px;
+}
+
+.toggle-switch #nav li:hover > a > i {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+}
+
+#nav .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 /* End css Toggle switch */
