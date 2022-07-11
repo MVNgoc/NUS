@@ -175,13 +175,14 @@
 .blank-sort {
     display: flex;
     justify-content: end;
-    padding: 8px 28px;
+    padding: 8px 32px;
 }
 
 .blank-sort .sort-button {
     border: none;
     background: none;
     position: relative;
+    height: 30px;
 }
 
 .blank-sort .sort-button i {
@@ -197,7 +198,7 @@
 }
 
 .blank-sort .sort-button:hover {
-    left: 32px;
+    left: 31px;
 }
 
 .blank-sort .sort-button:hover .subnav {
