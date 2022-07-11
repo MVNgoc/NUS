@@ -190,17 +190,17 @@
     border-radius: 15px;
 }
 
-.blank-sort .sort-button i:hover {
+.blank-sort .sort-button i:hover{
     cursor: pointer;
     background-color: #bca27e;
     color: #fff;
 }
 
 .blank-sort .sort-button:hover {
-    left: 33px;
+    left: 32px;
 }
 
-.blank-sort .sort-button:hover > .subnav {
+.blank-sort .sort-button:hover .subnav {
     display: block;
     z-index: 9999;
 }
@@ -241,6 +241,43 @@
     color: #fff;
 }
 /* End css sort button */
+
+/* Start css container-content */
+.container-content {
+    height: 20rem;
+}
+/* End css container-content */
+
+/* Start css footer */
+#footer {
+    padding: 64px 16px;
+    text-align: center !important;
+    background: #e4d3bb;
+}
+
+.social-media-list {
+    font-size: 24px;
+    opacity: 0.6;
+}
+
+.social-media-list a {
+    color: #000;
+}
+
+.icon-footer:hover {
+    opacity: 0.5;
+}
+
+#footer .footer-link {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.footer-link a {
+    color: #000;
+
+}
+/* End css footer */
 
 /* Start Tablet Responsive */
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
