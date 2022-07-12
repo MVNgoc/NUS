@@ -9,7 +9,7 @@
     padding: 0;
 }
 
-/* Start css frame big slogan image */
+/* Begin css frame big slogan image */
 .slogan-image-frame {
     height: 18rem;
     border-bottom: 1px solid #e6e6e6;
@@ -41,7 +41,11 @@
 }
 /* End css frame big slogan image */
 
-/* Start css Toggle switch */
+/* Begin css Toggle switch */
+.logo-search .search-icon {
+    display: none;
+}
+
 .toggle-switch {
     display: flex;
     width: auto !important;
@@ -61,11 +65,13 @@
     text-align: center;
 }
 
-.toggle-switch #nav li:hover {
+.toggle-switch #nav li:hover,
+.user_avatar #subnav-user li:hover {
     background: #bca27e;
 }
 
-.toggle-switch #nav li:hover > a {
+.toggle-switch #nav li:hover > a,
+.user_avatar #subnav-user li:hover > a {
     cursor: pointer;
     color: #fff;
 }
@@ -75,11 +81,12 @@
     z-index: 9999;
 }
 
-.toggle-switch #nav > li > a {
+.toggle-switch #nav > li > a,
+.toggle-switch .subnav-user > li > a {
     position: relative;
     color: #000;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 50px;
     padding: 13px 50px;
 }
@@ -102,7 +109,7 @@
 #nav .subnav > li > a {
     position: relative;
     color: #000;
-    padding: 15px 47px;
+    padding: 15px 43px;
     text-decoration: none;
     line-height: 50px;
 }
@@ -127,13 +134,13 @@
     -webkit-transform: rotate(45deg);
 }
 
-#nav .avatar-user {
-    position: absolute;
+.toggle-switch .avatar-user {
+    position: relative;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    top: -30px;
-    left: 300px;
+    top: 2px;
+    left: 122px;
     cursor: pointer;
 }
 
@@ -146,7 +153,7 @@
     left: 20px;
 }
 
-#nav .subnav-user {
+.toggle-switch .subnav-user {
     left: 208px;
     top: 19px;
 }
@@ -158,7 +165,7 @@
     line-height: 50px;
 }
 
-.search-container #search-hastag {
+.search-container #search-hashtag {
     height: 35px;
     width: 210px;
     border-radius: 15px;
@@ -166,12 +173,31 @@
     padding: 10px;
 }
 
-.search-container #search-hastag:focus {
+.search-container #search-hashtag:focus {
     outline-color: #bca27e;
 }
+
+.user_avatar {
+    position: relative;
+}
+
+.user_avatar .subnav-user {
+    list-style: none;
+}
+
+.user_avatar .subnav {
+    position: absolute;
+    background: #e4d3bb;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.4);
+    display: none;
+    top: 50px;
+    left: -10px;
+    z-index: 999;
+}
+
 /* End css Toggle switch */
 
-/* Start css sort button */
+/* Begin css sort button */
 .blank-sort {
     display: flex;
     justify-content: end;
@@ -243,13 +269,13 @@
 }
 /* End css sort button */
 
-/* Start css container-content */
+/* Begin css container-content */
 .container-content {
     height: 20rem;
 }
 /* End css container-content */
 
-/* Start css footer */
+/* Begin css footer */
 #footer {
     padding: 64px 16px;
     text-align: center !important;
@@ -280,14 +306,70 @@
 }
 /* End css footer */
 
-/* Start Tablet Responsive */
+/* Begin Tablet Responsive */
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-    
+    .logo-search .search-icon {
+        display: block;
+    }
+
+    .logo-search #search-hashtag {
+        display: none;
+    }
+
+    #nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start !important;
+        /* overflow: hidden; */
+    }
+
+    .toggle-switch {
+        height: 60px;
+    }
+
+    .logo-search .logo {
+        top: 295px;
+    }
+
+    .logo-search .search-container {
+        top: 12px;
+        left: 80px;
+    }
+
+    .logo-search .search-container .search-icon {
+        background: #f4eadc;
+        border-radius: 50%;
+        padding: 10px 10px;
+    }
+
+    .toggle-switch #nav {
+        margin: 5px 80px;
+    }
+
+    .toggle-switch .avatar-user {
+        top: -198px;
+        left: 640px;
+    }
+
+    .toggle-switch .subnav-user {
+        left: 540px;
+        top: -145px;
+    }
 }
 /* End Tablet Responsive */
 
-/* Start Mobile Responsive */
+/* Begin Mobile Responsive */
 @media (max-width: 46.1875em) {
     
 }
 /* End Mobile Responsive */
+
+/* Animation xuất hiện của Modal */
+@keyframes modalSideslipIn {
+    from {
+        transform: translateX(-40px)
+    }
+    to {
+        transform: translateX(0)
+    }
+}

@@ -1,12 +1,13 @@
 <nav class="toggle-switch">
     <div class="logo-search">
         <img src="/img/logo-NUS.jpg" alt="" class="logo">
-        <label for="search-hastag" class="search-container">
-            <input type="text" name="search-hastag" id="search-hastag" placeholder="Tìm kiếm hastag">
+        <label for="search-hashtag" class="search-container">
+            <input type="text" name="search-hashtag" id="search-hashtag" placeholder="Tìm kiếm hashtag">
+            <i id="search-icon" class="search-icon fa fa-search"></i>
         </label>
     </div>
     <ul id="nav">
-        <li><a href="#">All</a></li>
+        <li><a href="#">All</a></li>    
         <li>
             <a href="#">
                 Cataloge A
@@ -34,14 +35,15 @@
                 Cataloge C
             </a>
         </li>
-        <li>
-            <img src="/img/avatar.jPG" alt="" class="avatar-user">
-            <ul class="subnav subnav-user">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </li>
     </ul>
+
+    <div class="user_avatar">
+        <img src="/img/avatar.jPG" alt="" class="avatar-user" id="avatar-user">
+        <ul class="subnav subnav-user" id="subnav-user">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
 </nav>
 <div class="blank-sort">
     <button class="sort-button">
@@ -50,7 +52,7 @@
             <li><a href="#">Latest</a></li>
             <li><a href="#">Oldest</a></li>
             <li><a href="#">Most view</a></li>
-            <li><a href="#">Hastags</a></li>
+            <li><a href="#">Hashtags</a></li>
         </ul> 
     </button> 
 </div>
