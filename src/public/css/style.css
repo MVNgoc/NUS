@@ -46,6 +46,10 @@
     display: none;
 }
 
+.logo-search .more-icon {
+    display: none;
+}
+
 .toggle-switch {
     display: flex;
     width: auto !important;
@@ -191,10 +195,13 @@
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
     display: none;
     top: 50px;
-    left: -10px;
+    left: 14px;
     z-index: 999;
 }
 
+.logo-search .back-icon {
+    display: none;
+}
 /* End css Toggle switch */
 
 /* Begin css sort button */
@@ -308,8 +315,8 @@
 
 /* Begin Tablet Responsive */
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
-    .logo-search .search-icon {
-        display: block;
+    .user_avatar {
+        left: 100px;
     }
 
     .logo-search #search-hashtag {
@@ -318,9 +325,9 @@
 
     #nav {
         display: flex;
+        /* display: none; */
         flex-direction: column;
         justify-content: flex-start !important;
-        /* overflow: hidden; */
     }
 
     .toggle-switch {
@@ -334,26 +341,56 @@
     .logo-search .search-container {
         top: 12px;
         left: 80px;
+        display: flex;
+        align-items: center;
     }
 
-    .logo-search .search-container .search-icon {
+    .logo-search .search-icon {
+        display: block;
         background: #f4eadc;
         border-radius: 50%;
-        padding: 10px 10px;
+        padding: 10px;
+    }
+
+    .logo-search .search-icon:hover {
+        cursor: pointer;
     }
 
     .toggle-switch #nav {
-        margin: 5px 80px;
+        margin: 70px 0 0 0;
+        display: none;
+        position: relative;
+        right: 28px;
     }
 
     .toggle-switch .avatar-user {
-        top: -198px;
-        left: 640px;
+        top: 6px;
+        left: 570px;
     }
 
     .toggle-switch .subnav-user {
-        left: 540px;
-        top: -145px;
+        top: 54px;
+        left: 468px;
+    }
+
+    .logo-search .back-icon {
+        padding: 10px;
+    }
+
+    .logo-search .back-icon:hover {
+        cursor: pointer;
+    }
+
+    .logo-search .more-icon {
+        display: block;
+        background: #f4eadc;
+        border-radius: 50%;
+        padding: 10px;
+        margin-left: 20px;
+    }
+
+    .logo-search .more-icon:hover {
+        cursor: pointer;
     }
 }
 /* End Tablet Responsive */
