@@ -331,11 +331,13 @@
     color: #000;
     margin-left: 5px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .blog-frame-child .blog-frame-child-introduce-bottom .btn-readmore:hover {
     background-color: rgba(228,211,187, 1);
     cursor: pointer;
+    color: #000;
 }
 
 
