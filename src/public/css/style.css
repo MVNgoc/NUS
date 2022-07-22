@@ -287,8 +287,55 @@
 /* End css sort button */
 
 /* Begin css container-content */
-.container-content {
-    height: 20rem;
+.container-content .blog-frame {
+    height: auto;
+    width: auto;
+    background-color: rgba(228,211,187, 0.6);
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}   
+
+.container-content .blog-frame-child {
+    width: auto;
+    height: auto;
+    margin: 20px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-content .blog-frame-child:hover > .blog-frame-child-introduce-bottom {
+    cursor: pointer;
+    display: block;
+}
+
+.container-content .blog-frame-child .blog-frame-child-introduce-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(228,211,187, 0.4);
+    width: 100%;
+    height: auto;
+    color: rgb(241, 232, 232);
+    padding: 10px;
+    display: none;
+    animation: modalSideslideUp ease .4s;
+}
+
+.blog-frame-child .blog-frame-child-introduce-bottom .btn-readmore {
+    background-color: rgba(228,211,187, 0.7);
+    border: none;
+    border-radius: 12px;
+    padding: 3px 6px;
+    color: #000;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.blog-frame-child .blog-frame-child-introduce-bottom .btn-readmore:hover {
+    background-color: rgba(228,211,187, 1);
+    cursor: pointer;
 }
 
 
@@ -420,5 +467,14 @@
     }
     to {
         transform: translateX(0)
+    }
+}
+
+@keyframes modalSideslideUp {
+    from {
+        transform: translateY(40px)
+    }
+    to {
+        transform: translateY(0)
     }
 }
