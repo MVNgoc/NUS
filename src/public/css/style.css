@@ -54,7 +54,7 @@
     display: flex;
     width: auto !important;
     border-bottom: 1px solid #e6e6e6;
-    background: #e4d3bb;
+    background: rgba(228,211,187, 0.6);
 }
 
 .toggle-switch #nav {
@@ -101,13 +101,18 @@
 
 #nav .subnav {
     position: absolute;
-    background: #e4d3bb;
+    background: rgba(228,211,187, 0.8);
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
     display: none;
 }
 
 #nav .subnav > li {
     width: 100%;
+    border-bottom: 1px solid #fff;
+}
+
+#nav .subnav > li:last-child {
+    border-bottom: none;
 }
 
 #nav .subnav > li > a {
@@ -219,7 +224,7 @@
 }
 
 .blank-sort .sort-button i {
-    background-color: #e4d3bb;
+    background-color: rgba(228,211,187, 0.6);
     padding: 12px 30px; 
     border-radius: 15px;
 }
@@ -246,7 +251,7 @@
 .sort-button .subnav {
     position: relative;
     list-style: none;
-    background: #e4d3bb;
+    background: rgba(228,211,187, 0.8);
     box-shadow: 0 0 15px rgba(0,0,0, 0.4);
     margin-top: 2px;
     margin-bottom: 0;
@@ -258,6 +263,11 @@
     width: 100%;
     height: 40px;
     line-height: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.blank-sort .subnav li:last-child {
+    border-bottom: none;
 }
 
 .blank-sort .subnav a {
@@ -280,13 +290,15 @@
 .container-content {
     height: 20rem;
 }
+
+
 /* End css container-content */
 
 /* Begin css footer */
 #footer {
     padding: 64px 16px;
     text-align: center !important;
-    background: #e4d3bb;
+    background: rgba(228,211,187, 0.6);
 }
 
 .social-media-list {
@@ -347,7 +359,7 @@
 
     .logo-search .search-icon {
         display: block;
-        background: #f4eadc;
+        background: #f6f2ec;
         border-radius: 50%;
         padding: 10px;
     }
@@ -383,7 +395,7 @@
 
     .logo-search .more-icon {
         display: block;
-        background: #f4eadc;
+        background: #f6f2ec;
         border-radius: 50%;
         padding: 10px;
         margin-left: 20px;
