@@ -52,3 +52,15 @@ more_icon.onclick = () => {
         subnav_user.style.left = '468px';
     }
 }
+
+var more_info_icon = document.getElementById('more-info-icon');
+var more_info_subnav = document.getElementById('more-info-subnav');
+
+more_info_icon.onclick = (e) => {
+    more_info_subnav.style.display = 'block';
+    e.stopPropagation();
+}
+
+document.onclick = () => {
+    more_info_subnav.style.display = 'none';
+}

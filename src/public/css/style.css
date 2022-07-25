@@ -335,11 +335,51 @@
 }
 
 .blog-frame-child .blog-frame-child-introduce-bottom .btn-readmore:hover {
-    background-color: rgba(228,211,187, 1);
+    background-color: #bca27e;
     cursor: pointer;
-    color: #000;
+    color: #fff;
 }
 
+.blog-frame-child #more-info-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #bca27e;
+    padding: 10px;
+}
+
+.blog-frame-child #more-info-icon:hover {
+    cursor: pointer;
+    background-color: rgba(228,211,187, 0.6);
+    color: #fff;
+}
+
+.blog-frame-child #more-info-subnav {
+    position: absolute;
+    background: rgba(228,211,187, 0.9);
+    top: 44px;
+    right: 8px;
+    border-radius: 8px;
+    list-style: none;  
+    display: none;
+}
+
+.blog-frame-child #more-info-subnav > li > a {
+    line-height: 45px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.blog-frame-child #more-info-subnav:hover > li > a {
+    cursor: pointer;
+    background: #bca27e;
+    color: #fff;
+}
+
+.blog-frame-child #more-info-subnav a {
+    text-decoration: none;
+    color: #000;
+}
 
 /* End css container-content */
 
