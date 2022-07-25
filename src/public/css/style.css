@@ -354,7 +354,7 @@
     color: #fff;
 }
 
-.blog-frame-child #more-info-icon {
+.blog-frame-child .more-info-icon {
     position: absolute;
     top: 0;
     right: 0;
@@ -362,13 +362,13 @@
     padding: 10px;
 }
 
-.blog-frame-child #more-info-icon:hover {
+.blog-frame-child .more-info-icon:hover {
     cursor: pointer;
     background-color: rgba(228, 211, 187, 0.6);
     color: #fff;
 }
 
-.blog-frame-child #more-info-subnav {
+.blog-frame-child .more-info-subnav {
     position: absolute;
     background: rgba(228, 211, 187, 0.9);
     top: 44px;
@@ -378,19 +378,19 @@
     display: none;
 }
 
-.blog-frame-child #more-info-subnav>li>a {
+.blog-frame-child .more-info-subnav>li>a {
     line-height: 45px;
     padding: 12px;
     border-radius: 8px;
 }
 
-.blog-frame-child #more-info-subnav:hover>li>a {
+.blog-frame-child .more-info-subnav:hover>li>a {
     cursor: pointer;
     background: #bca27e;
     color: #fff;
 }
 
-.blog-frame-child #more-info-subnav a {
+.blog-frame-child .more-info-subnav a {
     text-decoration: none;
     color: #000;
 }
@@ -408,7 +408,7 @@
 }
 
 #footer .share {
-    padding: 0rem 0;
+    padding-top: 2rem;
 }
 
 #footer .share a {
@@ -433,7 +433,7 @@
     font-size: 1.25rem;
     color: rgb(0, 0, 0);
     font-weight: lighter;
-    padding: 1rem;
+    padding-bottom: 2rem;
 }
 
 #footer .credit a {
@@ -449,9 +449,9 @@
 /* End css footer */
 
 
-/* Begin Tablet Responsive */
+/* Begin Tablet and Mobile Responsive */
 
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
+@media (max-width: 81.375em) {
     .user_avatar {
         right: 24px;
         top: 6px;
@@ -516,19 +516,21 @@
     .logo-search .more-icon:hover {
         cursor: pointer;
     }
+
+    #nav .subnav {
+        position: relative;
+        top: -50px;
+        left: 192px;
+    }
+
+    .toggle-switch #nav li {
+        width: 12rem;
+        height: 3rem;
+    }
 }
 
 
-/* End Tablet Responsive */
-
-
-/* Begin Mobile Responsive */
-
-@media (max-width: 46.1875em) {}
-
-
-/* End Mobile Responsive */
-
+/* End Tablet and Mobile Responsive */
 
 /* Animation xuất hiện của Modal */
 

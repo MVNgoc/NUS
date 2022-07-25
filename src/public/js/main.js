@@ -50,15 +50,21 @@ more_icon.onclick = () => {
     }
 }
 
-var more_info_icon = document.getElementById('more-info-icon');
-var more_info_subnav = document.getElementById('more-info-subnav');
+var more_info_icon = document.getElementsByClassName('more-info-icon');
+var more_info_subnav = document.getElementsByClassName('more-info-subnav');
 
-more_info_icon.onclick = (e) => {
-    more_info_subnav.style.display = 'block';
-    e.stopPropagation();
+for(let i = 0; i < more_info_icon.length; i++) {
+    more_info_icon[i].onclick = (e) => {
+        if(more_info_subnav[i].style.display == 'block') {
+            more_info_subnav[i].style.display = 'none';
+        }
+        else {
+            more_info_subnav[i].style.display = 'block';
+            e.stopPropagation();
+        }
+    }
 }
 
 document.onclick = () => {
-    more_info_subnav.style.display = 'none';
     subnav_user.style.display = 'none';
 }
