@@ -402,20 +402,20 @@
 /* Begin css footer */
 
 #footer {
-    padding: 20px 16px;
+    padding: 8px 16px;
     text-align: center !important;
     background: rgba(228, 211, 187, 0.6);
 }
 
 #footer .share {
-    padding: 1rem 0;
+    padding: 0rem 0;
 }
 
 #footer .share a {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: .6rem;
     color: #000;
     opacity: 0.6;
@@ -423,22 +423,6 @@
 
 .icon-footer:hover {
     opacity: 0.5;
-}
-
-#footer .links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 1rem 0;
-    gap: 1rem;
-}
-
-#footer .links a {
-    padding: .7rem 2rem;
-    color: rgb(0, 0, 0);
-    border: .1rem solid rgba(0, 0, 0, 0.3);
-    font-size: 1.25rem;
-    text-decoration: none;
 }
 
 #footer .links a:hover {
@@ -449,7 +433,7 @@
     font-size: 1.25rem;
     color: rgb(0, 0, 0);
     font-weight: lighter;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 #footer .credit a {
