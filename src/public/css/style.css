@@ -206,7 +206,7 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     display: none;
     top: 50px;
-    left: 14px;
+    left: -106px;
     z-index: 999;
 }
 
@@ -453,7 +453,8 @@
 
 @media (min-width: 46.25em) and (max-width: 63.9375em) {
     .user_avatar {
-        left: 100px;
+        right: 24px;
+        top: 6px;
     }
     .logo-search #search-hashtag {
         display: none;
@@ -468,7 +469,7 @@
         height: 60px;
     }
     .logo-search .logo {
-        top: 295px;
+        top: 6px;
     }
     .logo-search .search-container {
         top: 12px;
@@ -491,13 +492,13 @@
         position: relative;
         right: 28px;
     }
+
     .toggle-switch .avatar-user {
         top: 6px;
         left: 570px;
     }
     .toggle-switch .subnav-user {
-        top: 54px;
-        left: 468px;
+        right: 10px;
     }
     .logo-search .back-icon {
         padding: 10px;

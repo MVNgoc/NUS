@@ -14,12 +14,9 @@ search_icon.onclick = () => {
     subnav_user.style.left = '316px';
 }
 
-avatar_user.onclick = () => {
+avatar_user.onclick = (e) => {
     subnav_user.style.display = 'block';
-}
-
-subnav_user.onmouseleave = () => {
-    subnav_user.style.display = 'none';
+    e.stopPropagation();
 }
 
 var back_icon = document.getElementById('back-icon');
@@ -63,4 +60,5 @@ more_info_icon.onclick = (e) => {
 
 document.onclick = () => {
     more_info_subnav.style.display = 'none';
+    subnav_user.style.display = 'none';
 }
