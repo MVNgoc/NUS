@@ -9,7 +9,7 @@ const port = 3000
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.engine('hbs', handlebars.engine({
-  extname: '.hbs',
+    extname: '.hbs',
 }));
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, 'resources/views'))
@@ -17,7 +17,10 @@ app.set('views', path.join(__dirname, 'resources/views'))
 app.use(morgan('combined'))
 
 app.get('/', (req, res) => {
-  res.render('home')
+    res.render('home')
+})
+app.get('/listacc', (req, res) => {
+    res.render('listacc')
 })
 
 // app.get('/login', (req, res) => {
@@ -25,5 +28,5 @@ app.get('/', (req, res) => {
 // })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`Example app listening at http://localhost:${port}`)
 })

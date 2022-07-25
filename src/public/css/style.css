@@ -399,6 +399,73 @@
 /* End css container-content */
 
 
+/* Begin css list account */
+
+.listAcc-heading {
+    text-align: center;
+    color: #8f6b3a;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.listAcc-heading span {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.listAcc {
+    margin-top: 50px;
+    height: 100%;
+    padding: 10px;
+}
+
+.listAcc-tb {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.listAcc-th {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+    background-color: #efe5d6;
+}
+
+.listAcc-td {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+.listAcc-tr:hover {
+    background-color: #fff3da;
+    cursor: pointer;
+}
+
+.container-list {
+    overflow: auto;
+}
+
+.listAcc-btn {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 10px;
+    color: #000000;
+    background-color: #efe5d6;
+}
+
+.listAcc-btn:hover {
+    background-color: #bca27e;
+}
+
+
+/* End css list account */
+
+
 /* Begin css footer */
 
 #footer {
@@ -492,7 +559,6 @@
         position: relative;
         right: 28px;
     }
-
     .toggle-switch .avatar-user {
         top: 6px;
         left: 570px;
@@ -516,13 +582,11 @@
     .logo-search .more-icon:hover {
         cursor: pointer;
     }
-
     #nav .subnav {
         position: relative;
         top: -50px;
         left: 192px;
     }
-
     .toggle-switch #nav li {
         width: 12rem;
         height: 3rem;
@@ -531,6 +595,7 @@
 
 
 /* End Tablet and Mobile Responsive */
+
 
 /* Animation xuất hiện của Modal */
 
