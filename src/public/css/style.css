@@ -60,7 +60,12 @@
     display: flex;
     width: auto !important;
     border-bottom: 1px solid #e6e6e6;
+<<<<<<< HEAD
     background: rgba(228, 211, 187, 0.6);
+=======
+    background: rgba(228,211,187, 0.6);
+    position: relative;
+>>>>>>> b0d9d83b0c1bf39dd0b85649821f38cc891ce167
 }
 
 .toggle-switch #nav {
@@ -150,12 +155,9 @@
 }
 
 .toggle-switch .avatar-user {
-    position: relative;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    top: 2px;
-    left: 122px;
     cursor: pointer;
 }
 
@@ -164,7 +166,7 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    top: 290px;
+    top: 2px;
     left: 20px;
 }
 
@@ -193,7 +195,9 @@
 }
 
 .user_avatar {
-    position: relative;
+    position: absolute;
+    right: 24px;
+    top: 2px;
 }
 
 .user_avatar .subnav-user {
