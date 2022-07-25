@@ -60,12 +60,8 @@
     display: flex;
     width: auto !important;
     border-bottom: 1px solid #e6e6e6;
-<<<<<<< HEAD
     background: rgba(228, 211, 187, 0.6);
-=======
-    background: rgba(228,211,187, 0.6);
     position: relative;
->>>>>>> b0d9d83b0c1bf39dd0b85649821f38cc891ce167
 }
 
 .toggle-switch #nav {
@@ -433,7 +429,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    padding: 1rem 0;
     gap: 1rem;
 }
 
@@ -441,7 +437,7 @@
     padding: .7rem 2rem;
     color: rgb(0, 0, 0);
     border: .1rem solid rgba(0, 0, 0, 0.3);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-decoration: none;
 }
 
@@ -449,13 +445,8 @@
     opacity: 0.5;
 }
 
-#footer .footer-link {
-    margin: 15px 0;
-    font-size: 15px;
-}
-
 #footer .credit {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: rgb(0, 0, 0);
     font-weight: lighter;
     padding: 1.5rem;
