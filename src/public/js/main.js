@@ -41,8 +41,7 @@ more_icon.onclick = () => {
         nav.style.display = 'flex';
         avatar_user.style.left = '392px';
         subnav_user.style.left = '288px';
-    }
-    else {
+    } else {
         toggle_switch.style.height = null;
         nav.style.display = 'none';
         avatar_user.style.left = '570px';
@@ -53,12 +52,11 @@ more_icon.onclick = () => {
 var more_info_icon = document.getElementsByClassName('more-info-icon');
 var more_info_subnav = document.getElementsByClassName('more-info-subnav');
 
-for(let i = 0; i < more_info_icon.length; i++) {
+for (let i = 0; i < more_info_icon.length; i++) {
     more_info_icon[i].onclick = (e) => {
-        if(more_info_subnav[i].style.display == 'block') {
+        if (more_info_subnav[i].style.display == 'block') {
             more_info_subnav[i].style.display = 'none';
-        }
-        else {
+        } else {
             more_info_subnav[i].style.display = 'block';
             e.stopPropagation();
         }
@@ -68,3 +66,12 @@ for(let i = 0; i < more_info_icon.length; i++) {
 document.onclick = () => {
     subnav_user.style.display = 'none';
 }
+
+// var btnOpenDigDelete = document.querySelector('.listAcc-btndelete');
+// var confirmDig = document.querySelector('.confirmdig-hide');
+// var btnCancelAcc = document.querySelector('.dig-footer btn-cancel');
+
+// function toggleDig() {
+//     confirmDig.classList.toggle('hide');
+// }
+// btnOpenDigDelete.addEventListener('click', toggleDig);
