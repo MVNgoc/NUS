@@ -317,6 +317,7 @@
     margin: 20px 0px;
     position: relative;
     overflow: hidden;
+    line-height: 2rem;
 }
 
 .container-content .blog-frame-child:hover>.blog-frame-child-introduce-bottom {
