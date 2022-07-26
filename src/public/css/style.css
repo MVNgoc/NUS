@@ -666,9 +666,23 @@
     }
 }
 
-
 /* End Tablet and Mobile Responsive */
 
+/* Begin Mobile Responsive */
+@media (max-width: 46.188em) {
+    .toggle-switch #nav {
+        right: 88px;
+    }
+
+    .logo-search .search-container {
+        left: 70px;
+    }
+
+    .logo-search .search-icon {
+        margin-left: 10px;
+    }
+}
+/* End Mobile Responsive */
 
 /* Animation xuất hiện của Modal */
 
