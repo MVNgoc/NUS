@@ -70,11 +70,7 @@ document.onclick = () => {
 var btnOpenDigDelete = document.getElementById('listAcc_btndelete');
 var btnCancelAcc = document.getElementsByClassName('dig-footer btn-cancel');
 
-// function toggleDig() {
-//     console.log('run');
-//     confirmDig.('show');
-// }
-// btnOpenDigDelete.addEventListener('click', toggleDig)
+
 
 
 $('.listAcc_btndelete').click(() => {
@@ -83,4 +79,15 @@ $('.listAcc_btndelete').click(() => {
 
 $('#btnCancle').click(() => {
     $('#confirmDialog').addClass('confirmdig-hide')
+})
+
+
+$('.listAcc_btnaccept').click(() => {
+    let text = "This account has been approved!";
+    if (confirm(text) == true) {
+        text = "You pressed OK!";
+    } else {
+        text = "You canceled!";
+    }
+    document.getElementById("demo").innerHTML = text;
 })
