@@ -67,11 +67,20 @@ document.onclick = () => {
     subnav_user.style.display = 'none';
 }
 
-// var btnOpenDigDelete = document.querySelector('.listAcc-btndelete');
-// var confirmDig = document.querySelector('.confirmdig-hide');
-// var btnCancelAcc = document.querySelector('.dig-footer btn-cancel');
+var btnOpenDigDelete = document.getElementById('listAcc_btndelete');
+var btnCancelAcc = document.getElementsByClassName('dig-footer btn-cancel');
 
 // function toggleDig() {
-//     confirmDig.classList.toggle('hide');
+//     console.log('run');
+//     confirmDig.('show');
 // }
-// btnOpenDigDelete.addEventListener('click', toggleDig);
+// btnOpenDigDelete.addEventListener('click', toggleDig)
+
+
+$('.listAcc_btndelete').click(() => {
+    $('#confirmDialog').removeClass('confirmdig-hide')
+})
+
+$('#btnCancle').click(() => {
+    $('#confirmDialog').addClass('confirmdig-hide')
+})

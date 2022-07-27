@@ -468,10 +468,9 @@
 
 /* Begin css dialog*/
 
-
-/* .confirmdig-hide {
+.confirmdig-hide {
     display: none;
-} */
+}
 
 .confirmdig {
     position: fixed;

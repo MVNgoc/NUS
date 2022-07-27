@@ -81,7 +81,8 @@
                     <td class="listAcc-td">03/08/1993</td>
                     <td class="listAcc-td">Viewer</td>
                     <td class="listAcc-td">
-                        <button class="listAcc-btn"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn"><i class="fa-solid fa-trash"></i></button>
+                        <button class="listAcc-btn" id="listAcc_btnaccept"><i class="fa-solid fa-check"></i></button>
+                        <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
                 <tr class="listAcc-tr">
@@ -92,7 +93,8 @@
                     <td class="listAcc-td">03/08/1993</td>
                     <td class="listAcc-td">Viewer</td>
                     <td class="listAcc-td">
-                        <button class="listAcc-btn"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn"><i class="fa-solid fa-trash"></i></button>
+                        <button class="listAcc-btn" id="listAcc_btnaccept"><i class="fa-solid fa-check"></i>
+                        </button> <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
                 <tr class="listAcc-tr">
@@ -103,7 +105,7 @@
                     <td class="listAcc-td">03/08/1993</td>
                     <td class="listAcc-td">Viewer</td>
                     <td class="listAcc-td">
-                        <button class="listAcc-btn"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn"><i class="fa-solid fa-trash"></i></button>
+                        <button class="listAcc-btn " id="listAcc_btnaccept"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
                 <tr class="listAcc-tr">
@@ -114,7 +116,7 @@
                     <td class="listAcc-td">03/08/1993</td>
                     <td class="listAcc-td">Viewer</td>
                     <td class="listAcc-td">
-                        <button class="listAcc-btn"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn"><i class="fa-solid fa-trash"></i></button>
+                        <button class="listAcc-btn " id="listAcc_btnaccept"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
                 <tr class="listAcc-tr">
@@ -125,11 +127,13 @@
                     <td class="listAcc-td">03/08/1993</td>
                     <td class="listAcc-td">Viewer</td>
                     <td class="listAcc-td">
-                        <button class="listAcc-btnaccept listAcc-btn"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btndelete listAcc-btn"><i class="fa-solid fa-trash"></i></button>
+                        <button class="listAcc-btn " id="listAcc_btnaccept"><i class="fa-solid fa-check"></i></button> <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 </tr>
 
-                <div class="confirmdig confirmdig-hide">
+            </table>
+
+                <div class="confirmdig confirmdig-hide" id="confirmDialog">
                     <div id="dialogCont" class="dig-container">
                         <div class="dig-header">
                             Confirm Deletion
@@ -137,14 +141,10 @@
                         <div id="digbody" class="dig-body">Are you sure you want to remove this account?</div>
                         <div class="dig-footer">
                             <a class="confirmdig-btn btn-delete">Delete</a>
-                            <a class="confirmdig-btn btn-cancel">Cancel</a>
+                            <a class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</a>
                         </div>
                     </div>
                 </div>
-
-            </table>
-
-
 
         </div>
 
