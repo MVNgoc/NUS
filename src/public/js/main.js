@@ -91,3 +91,28 @@ $('.listAcc_btnaccept').click(() => {
     }
     document.getElementById("demo").innerHTML = text;
 })
+
+var checkboxtextarea = document.getElementById('checkbox-textarea');
+var textareareport = document.getElementById('textarea-report');
+
+checkboxtextarea.onclick = () => {
+    if (checkboxtextarea.checked) {
+        textareareport.disabled = false;
+    } else {
+        textareareport.disabled = true;
+        textareareport.value = '';
+    }
+}
+
+var confirmDialog = document.getElementById('confirmDialog');
+var reportButton = document.getElementsByClassName('report-button');
+var checkbox = document.getElementsByClassName('checkbox');
+
+for (let i = 0; i < reportButton.length; i++) {
+    reportButton[i].onclick = () => {
+        confirmDialog.classList.remove('confirmdig-hide');
+        for (let j = 0; j < checkbox.length; j++) {
+            checkbox[j].checked = false;
+        }
+    }
+}

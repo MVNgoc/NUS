@@ -69,7 +69,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -89,7 +89,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -109,7 +109,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -129,7 +129,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -149,7 +149,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -169,7 +169,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -189,7 +189,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -209,7 +209,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -229,7 +229,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -249,7 +249,7 @@
             <i class="more-info-icon material-icons">&#xe5d4;</i>
             <ul class="more-info-subnav">
                 <li>
-                    <button type="button">
+                    <button type="button" class="report-button">
                         <i class="fa fa-flag"></i>
                         Báo cáo
                     </button>
@@ -262,4 +262,41 @@
             </div>
         </div>
     </div> 
+
+    <div class="confirmdig confirmdig-hide" id="confirmDialog">
+        <div id="dialogCont" class="dig-container">
+            <div class="dig-header">
+                Báo cáo bài viết
+            </div>
+            <div id="digbody">
+                <div class="dig-body">Bài viết này vi phạm điều lệ nào</div>
+                <label class="container-report-popup">Người dùng ảo
+                    <input type="checkbox" class="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-report-popup">Ngôn từ gây thù ghét
+                    <input type="checkbox" class="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-report-popup">Spam
+                    <input type="checkbox" class="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-report-popup">Xung đột tôn giáo
+                    <input type="checkbox" class="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container-report-popup">
+                    <input type="checkbox" class="checkbox" id="checkbox-textarea">
+                    <span class="checkmark"></span>
+                    <textarea name="" id="textarea-report" cols="38" rows="5" placeholder="Những điều lệ vi phạm khác..." disabled="true"></textarea>
+                </label>
+            </div>
+
+            <div class="dig-footer">
+                <a class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</a>
+                <a class="confirmdig-btn btn-report" id="btnSend">Xác nhận</a>
+            </div>
+        </div>
+    </div>
 </div>
