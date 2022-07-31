@@ -320,22 +320,15 @@
     line-height: 2rem;
 }
 
-.container-content .blog-frame-child:hover>.blog-frame-child-introduce-bottom,
-.container-content .blog-frame-child:hover>.blog-frame-child-introduce-top {
-    cursor: pointer;
-    display: block;
-}
-
 .container-content .blog-frame-child .blog-frame-child-introduce-top {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(228, 211, 187, 0.4);
+    background-color: rgba(228, 211, 187, 0.3);
     width: 100%;
     height: auto;
     color: rgb(241, 232, 232);
     padding: 10px;
-    display: none;
     animation: modalSideslideDown ease .4s;
 }
 
@@ -356,12 +349,11 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: rgba(228, 211, 187, 0.4);
+    background-color: rgba(228, 211, 187, 0.3);
     width: 100%;
     height: auto;
     color: rgb(241, 232, 232);
     padding: 10px;
-    display: none;
     animation: modalSideslideUp ease .4s;
 }
 

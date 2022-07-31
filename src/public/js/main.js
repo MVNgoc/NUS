@@ -67,11 +67,6 @@ document.onclick = () => {
     subnav_user.style.display = 'none';
 }
 
-var btnOpenDigDelete = document.getElementById('listAcc_btndelete');
-var btnCancelAcc = document.getElementsByClassName('dig-footer btn-cancel');
-
-
-
 
 $('.listAcc_btndelete').click(() => {
     $('#confirmDialog').removeClass('confirmdig-hide')
@@ -79,6 +74,9 @@ $('.listAcc_btndelete').click(() => {
 
 $('#btnCancle').click(() => {
     $('#confirmDialog').addClass('confirmdig-hide')
+    for (let i = 0; i < more_info_icon.length; i++) {
+        more_info_subnav[i].style.display = 'none';
+    }
 })
 
 
@@ -113,6 +111,8 @@ for (let i = 0; i < reportButton.length; i++) {
         confirmDialog.classList.remove('confirmdig-hide');
         for (let j = 0; j < checkbox.length; j++) {
             checkbox[j].checked = false;
+            textareareport.disabled = true;
+            textareareport.value = '';
         }
     }
 }
