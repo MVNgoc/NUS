@@ -20,8 +20,11 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 app.get('/listacc', (req, res) => {
-    res.render('listacc')
-})
+        res.render('listacc')
+    })
+    // app.get('/404', (req, res) => {
+    //     res.render('404', { layout: '' })
+    // })
 
 // app.get('/login', (req, res) => {
 //   res.render('login', {layout: ''})
