@@ -72,11 +72,14 @@ $('.listAcc_btndelete').click(() => {
     $('#confirmDialog').removeClass('confirmdig-hide')
 })
 
+var createBlogContainer = document.getElementById('create-blog-container');
+
 $('#btnCancle').click(() => {
     $('#confirmDialog').addClass('confirmdig-hide')
     for (let i = 0; i < more_info_icon.length; i++) {
         more_info_subnav[i].style.display = 'none';
     }
+    createBlogContainer.classList.add('confirmdig-hide');
 })
 
 
@@ -114,5 +117,22 @@ for (let i = 0; i < reportButton.length; i++) {
             textareareport.disabled = true;
             textareareport.value = '';
         }
+    }
+}
+
+var createBlogInput = document.getElementById('create-blog-input');
+var blogContent = document.getElementById('blog-content');
+var btnPost = document.getElementById('btnPost');
+
+createBlogInput.onclick = () => {
+    createBlogContainer.classList.remove('confirmdig-hide');
+}
+
+blogContent.onkeyup = () => {
+    if(blogContent.value != '') {
+        btnPost.disabled = false;
+    }
+    else {
+        btnPost.disabled = true;
     }
 }

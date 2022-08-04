@@ -19,12 +19,18 @@ app.use(morgan('combined'))
 app.get('/', (req, res) => {
     res.render('home')
 })
+
 app.get('/listacc', (req, res) => {
         res.render('listacc')
-    })
-    // app.get('/404', (req, res) => {
-    //     res.render('404', { layout: '' })
-    // })
+})
+
+app.get('/404', (req, res) => {
+    res.render('404', { layout: '' })
+})
+
+app.get('/selfhome', (req, res) => {
+    res.render('selfhome')
+})
 
 // app.get('/login', (req, res) => {
 //   res.render('login', {layout: ''})
