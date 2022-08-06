@@ -754,11 +754,24 @@
     .new-blog-container .create-blog {
         width: 70% !important;
     }
+
+    .create-blog-container .create-blog-form {
+        top: 50px;
+    }
 }
 
 
 /* End Tablet and Mobile Responsive */
 
+/* Begin Tablet Responsive */
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    .create-blog-container .create-blog-form-body #blog-content {
+        height: 130px !important;
+    }
+}
+
+/* Begin Tablet Responsive */
 
 /* Begin Mobile Responsive */
 
@@ -776,6 +789,21 @@
     .new-blog-container .create-blog {
         padding: 0 12px !important;
         width: 100% !important;
+    }
+
+    .user-container .user-name {
+        left: 140px;
+        top: 10px;
+        font-size: 24px;
+    }
+
+    .create-blog-container .create-blog-form {
+        width: 360px !important;
+    }
+
+    .create-blog-container .create-blog-form-body textarea {
+        height: 140px !important;
+        margin-top: 1px;
     }
 }
 
@@ -944,6 +972,7 @@
 
 .create-blog-container .create-blog-form {
     position: fixed;
+    top: 28px;
     width: 600px;
     height: auto;
     background: #fff;
