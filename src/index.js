@@ -20,7 +20,10 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 app.get('/listacc', (req, res) => {
-        res.render('listacc')
+    res.render('listacc')
+})
+app.get('/chart', (req, res) => {
+        res.render('chart')
     })
     // app.get('/404', (req, res) => {
     //     res.render('404', { layout: '' })

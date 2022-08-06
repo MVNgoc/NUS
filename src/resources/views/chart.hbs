@@ -1,0 +1,215 @@
+<nav class="toggle-switch" id="toggle-switch">
+    <div class="logo-search">
+        <img src="/img/logo-NUS.jpg" alt="" class="logo" id="logo">
+        <label for="search-hashtag" class="search-container">
+            <i id="back-icon" class="back-icon fa fa-chevron-left"></i>
+            <input type="text" name="search-hashtag" id="search-hashtag" placeholder="Tìm kiếm hashtag">
+            <i id="search-icon" class="search-icon fa fa-search"></i>
+            <i id="more-icon" class="more-icon fa fa-align-justify"></i>
+        </label>
+    </div>
+    <ul id="nav">
+        <li><a href="#">All</a></li>
+        <li>
+            <a href="#">
+                Cataloge A
+                <i class="arrow down"></i>
+            </a>
+            <ul class="subnav">
+                <li><a href="#">Cataloge A.1</a></li>
+                <li><a href="#">Cataloge A.2</a></li>
+                <li><a href="#">Cataloge A.3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                Cataloge B
+                <i class="arrow down"></i>
+            </a>
+            <ul class="subnav">
+                <li><a href="#">Cataloge B.2</a></li>
+                <li><a href="#">Cataloge B.2</a></li>
+                <li><a href="#">Cataloge B.3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                Cataloge C
+            </a>
+        </li>
+    </ul>
+
+    <div class="user_avatar">
+        <img src="/img/avatar.jPG" alt="" class="avatar-user" id="avatar-user">
+        <ul class="subnav subnav-user" id="subnav-user">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="button_contact button_contact_hide" id="button_contact">
+    <div class='buton_contact'>
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</div>
+
+<div class="sidebar sidebar_hide" id="sidebar">
+    <ul>
+        <div class="button_sidebar" id="button_sidebar">
+            <div class='buton_contact'>
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+        </div>
+        <li>
+            <a href="#chartPost">
+                <i class="fas fa-th-large"></i>
+                <div>Posts</div>
+            </a>
+        </li>
+        <li>
+            <a href="#chartUser">
+                <i class="fas fa-users"></i>
+                <div>Users</div>
+            </a>
+        </li>
+        <li>
+            <a href="#chartHas">
+                <i class="fas fa-hashtag"></i>
+                <div>Hastag</div>
+            </a>
+        </li>
+        <li>
+            <a href="#chartReport">
+                <i class="fa-solid fa-pen"></i>
+                <div>User's Reports</div>
+            </a>
+        </li>
+        <li>
+            <a href="#" id="userPostBtn">
+                <i class="fas fa-flag"></i>
+                <div>Specific Writter Post</div>
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<div class="main">
+    <div class="cards">
+        <div class="card">
+            <div class="card-content">
+                <div class="number">9999</div>
+                <div class="card-name">Posts</div>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-th-large"></i>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="number">9999</div>
+                <div class="card-name">Users</div>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-users"></i>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="number">9999</div>
+                <div class="card-name">Hastags</div>
+            </div>
+            <div class="icon-box">
+                <i class="fas fa-hashtag"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="chartPost" id="chartPost">
+    <h1 class="section-heading"> Posts</h1>
+    <div class="container  container-list my-3">
+        <div class="charts">
+            <div class="chart">
+                <h2>Posts (past 12 months)</h2>
+                <div>
+                    <canvas class="lineChart" id="lineChartPost"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="chartUser" id="chartUser">
+    <h1 class="section-heading"> Users</h1>
+    <div class="container  container-list my-3">
+        <div class="charts">
+            <div class="chart">
+                <h2>Users (past 12 months)</h2>
+                <div>
+                    <canvas class="lineChart" id="lineChartUser"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="chartHas" id="chartHas">
+    <h1 class="section-heading"> Hastags</h1>
+    <div class="container  container-list my-3">
+        <div class="charts">
+            <div class="chart">
+                <h2>Hastags (past 12 months)</h2>
+                <div>
+                    <canvas class="lineChart" id="lineChartHas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="chartReport" id="chartReport">
+    <h1 class="section-heading"> User's Reports</h1>
+    <div class="container  container-list my-3">
+        <div class="charts">
+            <div class="chart">
+                <h2>Reports (past 12 months)</h2>
+                <div>
+                    <canvas class="lineChart" id="lineChartReport"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="confirmdig popupCrt popupCrt_hide" id="popupChart">
+    <div id="dialogCont popupUserCont" class="popup_Usercont">
+        <div class="dig-header pop_header">
+            Specific User Post
+        </div>
+        <div id="digbody" class="dig-body popup_body">
+            <div class="search">
+                <input type="text" name="search" placeholder="search here">
+                <label for="search"><i class="fas fa-search" id="searchpopup"></i></label>
+            </div>
+            <section class="chartSpecific chartSpecific_hide" id="chartSpecific">
+                <div class="container  container-list my-3">
+                    <div class="charts_user">
+                        <div class="chart">
+                            <h2>Specific User Post (past 12 months)</h2>
+                            <div>
+                                <canvas class="lineChart" id="lineChartSpecific"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="dig-footer">
+            <a class="confirmdig-btn btn-cancel" id="btnCanclePopup">Cancel</a>
+        </div>
+    </div>
+</div>
