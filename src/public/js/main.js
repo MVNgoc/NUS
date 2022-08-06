@@ -72,16 +72,27 @@ $('.listAcc_btndelete').click(() => {
     $('#confirmDialog').removeClass('confirmdig-hide')
 })
 
-var createBlogContainer = document.getElementById('create-blog-container');
-
+var confirmDialog = document.getElementById('confirmDialog');
 $('#btnCancle').click(() => {
     $('#confirmDialog').addClass('confirmdig-hide')
     for (let i = 0; i < more_info_icon.length; i++) {
         more_info_subnav[i].style.display = 'none';
     }
-    createBlogContainer.classList.add('confirmdig-hide');
 })
 
+var createBlogContainer = document.getElementById('create-blog-container');
+var blogName = document.getElementById('blog-name');
+var cataloge = document.getElementById('cataloge');
+var blogContent = document.getElementById('blog-content');
+var checkbox = document.getElementsByClassName('checkbox');
+
+$('#btnCancle-create-blog').click(() => {
+    createBlogContainer.classList.add('confirmdig-hide');
+    blogName.value = '';
+    cataloge.options.selected = true;
+    blogContent.value = '';
+    checkbox[0].checked = false;
+})
 
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";
@@ -107,9 +118,7 @@ if(checkboxtextarea) {
     }
 }
 
-var confirmDialog = document.getElementById('confirmDialog');
 var reportButton = document.getElementsByClassName('report-button');
-var checkbox = document.getElementsByClassName('checkbox');
 
 for (let i = 0; i < reportButton.length; i++) {
     reportButton[i].onclick = () => {
@@ -124,13 +133,6 @@ for (let i = 0; i < reportButton.length; i++) {
 
 $('#button_contact').click(() => {
     $('#sidebar').css("display", "none");
-})
-
-$('#btnCancle').click(() => {
-    $('#confirmDialog').addClass('confirmdig-hide')
-    for (let i = 0; i < more_info_icon.length; i++) {
-        more_info_subnav[i].style.display = 'none';
-    }
 })
 
 var createBlogInput = document.getElementById('create-blog-input');
@@ -176,14 +178,6 @@ $('#btnCanclePopup').click(() => {
 $('.listAcc_btndelete').click(() => {
     $('#confirmDialog').removeClass('confirmdig-hide')
 })
-$('#btnCancle').click(() => {
-    $('#confirmDialog').addClass('confirmdig-hide')
-    for (let i = 0; i < more_info_icon.length; i++) {
-        more_info_subnav[i].style.display = 'none';
-    }
-    createBlogContainer.classList.add('confirmdig-hide');
-})
-
 
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";

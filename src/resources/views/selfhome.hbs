@@ -108,7 +108,7 @@
             </label>
         </div>
         <div class="create-blog-form-footer">
-            <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</button>
+            <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle-create-blog">Hủy</button>
             <button class="confirmdig-btn btn-report" id="btnPost" disabled="true">Đăng</button>
         </div>
     </form>
@@ -319,7 +319,7 @@
     </div> 
 
     <div class="confirmdig confirmdig-hide" id="confirmDialog">
-        <div id="dialogCont" class="dig-container">
+        <form id="dialogCont" class="dig-container" action="" method="post">
             <div class="dig-header">
                 Báo cáo bài viết
             </div>
@@ -349,9 +349,9 @@
             </div>
 
             <div class="dig-footer">
-                <a class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</a>
-                <a class="confirmdig-btn btn-report" id="btnSend">Xác nhận</a>
+                <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</butt>
+                <button class="confirmdig-btn btn-report" id="btnSend">Xác nhận</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
