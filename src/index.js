@@ -19,7 +19,9 @@ app.use(morgan('combined'))
 app.get('/', (req, res) => {
     res.render('home')
 })
+
 app.get('/listacc', (req, res) => {
+<<<<<<< HEAD
     res.render('listacc')
 })
 app.get('/chart', (req, res) => {
@@ -28,6 +30,18 @@ app.get('/chart', (req, res) => {
     // app.get('/404', (req, res) => {
     //     res.render('404', { layout: '' })
     // })
+=======
+        res.render('listacc')
+})
+
+app.get('/404', (req, res) => {
+    res.render('404', { layout: '' })
+})
+
+app.get('/selfhome', (req, res) => {
+    res.render('selfhome')
+})
+>>>>>>> 1987e7b594c3e4d7f3ea1ed7ed96c497dad0735c
 
 // app.get('/login', (req, res) => {
 //   res.render('login', {layout: ''})

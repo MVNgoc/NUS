@@ -220,11 +220,14 @@ $('.listAcc_btndelete').click(() => {
     $('#confirmDialog').removeClass('confirmdig-hide')
 })
 
+var createBlogContainer = document.getElementById('create-blog-container');
+
 $('#btnCancle').click(() => {
     $('#confirmDialog').addClass('confirmdig-hide')
     for (let i = 0; i < more_info_icon.length; i++) {
         more_info_subnav[i].style.display = 'none';
     }
+    createBlogContainer.classList.add('confirmdig-hide');
 })
 
 
@@ -264,6 +267,7 @@ for (let i = 0; i < reportButton.length; i++) {
         }
     }
 }
+<<<<<<< HEAD
 $('#button_contact').click(() => {
     $('#sidebar').css("display", "none");
 })
@@ -274,3 +278,22 @@ $('#btnCancle').click(() => {
         more_info_subnav[i].style.display = 'none';
     }
 })
+=======
+
+var createBlogInput = document.getElementById('create-blog-input');
+var blogContent = document.getElementById('blog-content');
+var btnPost = document.getElementById('btnPost');
+
+createBlogInput.onclick = () => {
+    createBlogContainer.classList.remove('confirmdig-hide');
+}
+
+blogContent.onkeyup = () => {
+    if(blogContent.value != '') {
+        btnPost.disabled = false;
+    }
+    else {
+        btnPost.disabled = true;
+    }
+}
+>>>>>>> 1987e7b594c3e4d7f3ea1ed7ed96c497dad0735c

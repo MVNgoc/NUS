@@ -47,6 +47,27 @@
         </ul>
     </div>
 </nav>
+
+<div class="user-container">
+    <img src="/img/avatar.jPG" alt="" class="logo">
+    <div class="user-name">
+        Mai Văn Ngọc
+    </div>
+</div>
+
+<div class="new-blog-container">
+    <div class="create-blog">
+        <div class="avatar-user">
+            <img src="/img/avatar.jPG" alt="" class="logo">
+            {{!-- <div class="name-user">Mai Ngọc</div> --}}
+        </div>                   
+
+        <div class="create-blog-input" id="create-blog-input">
+            Tạo blog mới...
+        </div>
+    </div>
+</div>
+
 <div class="blank-sort">
     <button class="sort-button">
         <i class="icon-sort fa fa-sort"></i>
@@ -57,6 +78,40 @@
             <li><a href="#">Hashtags</a></li>
         </ul> 
     </button> 
+</div>
+
+<div class="create-blog-container confirmdig-hide" id="create-blog-container">
+    <form class="create-blog-form" action="" method="post">
+        <div class="create-blog-form-header">
+            Tạo blog mới
+        </div>
+        <div class="create-blog-form-body">
+            <label for="blog-name">Tên blog</label>
+            <input type="text" id="blog-name" name="blog-name" placeholder="Tên bài blog...">
+            
+            <label for="cataloge">Cataloge</label>
+            <select id="cataloge" name="cataloge">
+                <option value="cataloge-A">Cataloge A</option>
+                <option value="cataloge-B">Cataloge B</option>
+                <option value="cataloge-C">Cataloge C</option>
+            </select>
+            
+            <label for="blog-image">Ảnh bìa</label>
+            <input type="file" id="blog-image" name="blog-image">
+            
+            <label for="blog-content">Nội dung</label>
+            <textarea id="blog-content" name="blog-content" placeholder="Nội dung bài blog..."></textarea>
+
+            <label class="container-report-popup">Publish
+                <input type="checkbox" class="checkbox">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="create-blog-form-footer">
+            <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</button>
+            <button class="confirmdig-btn btn-report" id="btnPost" disabled="true">Đăng</button>
+        </div>
+    </form>
 </div>
 
 <div class="container-content">
@@ -264,7 +319,7 @@
     </div> 
 
     <div class="confirmdig confirmdig-hide" id="confirmDialog">
-        <form id="dialogCont" class="dig-container" action="" method="post">
+        <div id="dialogCont" class="dig-container">
             <div class="dig-header">
                 Báo cáo bài viết
             </div>
@@ -294,9 +349,9 @@
             </div>
 
             <div class="dig-footer">
-                <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</butt>
-                <button class="confirmdig-btn btn-report" id="btnSend">Xác nhận</button>
+                <a class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</a>
+                <a class="confirmdig-btn btn-report" id="btnSend">Xác nhận</a>
             </div>
-        </form>
+        </div>
     </div>
 </div>
