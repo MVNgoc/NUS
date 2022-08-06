@@ -18,7 +18,27 @@ $('#btnCanclePopup').click(() => {
     $('#chartSpecific').addClass('chartSpecific_hide')
 
 })
+$('.listAcc_btndelete').click(() => {
+    $('#confirmDialog').removeClass('confirmdig-hide')
+})
+$('#btnCancle').click(() => {
+    $('#confirmDialog').addClass('confirmdig-hide')
+    for (let i = 0; i < more_info_icon.length; i++) {
+        more_info_subnav[i].style.display = 'none';
+    }
+    createBlogContainer.classList.add('confirmdig-hide');
+})
 
+
+$('.listAcc_btnaccept').click(() => {
+    let text = "This account has been approved!";
+    if (confirm(text) == true) {
+        text = "You pressed OK!";
+    } else {
+        text = "You canceled!";
+    }
+    document.getElementById("demo").innerHTML = text;
+})
 var ctx1 = document.getElementById('lineChartPost').getContext('2d');
 var myChart1 = new Chart(ctx1, {
     type: 'line',
@@ -266,19 +286,22 @@ for (let i = 0; i < reportButton.length; i++) {
             textareareport.value = '';
         }
     }
-}
-<<<<<<< HEAD
+} // <<
+// <<
+// <<
+// <
+// HEAD
 $('#button_contact').click(() => {
     $('#sidebar').css("display", "none");
 })
 
 $('#btnCancle').click(() => {
-    $('#confirmDialog').addClass('confirmdig-hide')
-    for (let i = 0; i < more_info_icon.length; i++) {
-        more_info_subnav[i].style.display = 'none';
-    }
-})
-=======
+        $('#confirmDialog').addClass('confirmdig-hide')
+        for (let i = 0; i < more_info_icon.length; i++) {
+            more_info_subnav[i].style.display = 'none';
+        }
+    })
+    // =======
 
 var createBlogInput = document.getElementById('create-blog-input');
 var blogContent = document.getElementById('blog-content');
@@ -289,11 +312,10 @@ createBlogInput.onclick = () => {
 }
 
 blogContent.onkeyup = () => {
-    if(blogContent.value != '') {
-        btnPost.disabled = false;
+        if (blogContent.value != '') {
+            btnPost.disabled = false;
+        } else {
+            btnPost.disabled = true;
+        }
     }
-    else {
-        btnPost.disabled = true;
-    }
-}
->>>>>>> 1987e7b594c3e4d7f3ea1ed7ed96c497dad0735c
+    //>>>>>> > 1987e7 b594c3e4d7f3ea1ed7ed96c497dad0735c
