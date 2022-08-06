@@ -752,7 +752,6 @@
     }
 
     .new-blog-container .create-blog {
-        padding: 0 30px !important;
         width: 70% !important;
     }
 }
@@ -891,21 +890,21 @@
 .new-blog-container .create-blog {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 8rem;
+    height: 4rem;
     width: 50%;
     background-color: rgba(228, 211, 187, 0.7);
     margin: 20px;
-    padding: 0 40px;
+    padding: 0 15px;
     border-radius: 1rem;
 }
 
 .new-blog-container .create-blog-input {
-    width: 50%;
+    width: 100%;
     height: 2.5rem;
     background-color: #fff;
     padding: 8px 12px;
     border-radius: 1rem;
+    margin-left: 5px;
 }
 
 .new-blog-container .create-blog-input:hover {
@@ -920,21 +919,15 @@
 }
 
 .new-blog-container .avatar-user .logo {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    margin-bottom: 8px;
+    margin-right: 5px;
 }
 
 .new-blog-container .avatar-user .name-user {
     font-weight: bold;
-    font-size: 17px;
-}
-
-.new-blog-container .create-blog .temp {
-    height: 82%;
-    width: 2px;
-    background-color: #d9c19d;
+    font-size: 16px;
 }
 
 .create-blog-container {
@@ -995,6 +988,36 @@
 .create-blog-container .create-blog-form-body textarea {
     height: 200px;
 }
+
+.user-container {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(228, 211, 187, 0.7);
+    margin-top: 40px;
+}
+
+.user-container {
+    position: relative;
+}
+
+.user-container .logo {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    position: absolute;
+    left: 30px;
+    top: -25px;
+    border: #fff solid 3px;
+}
+
+.user-container .user-name {
+    position: absolute;
+    left: 160px;
+    top: 12px;
+    font-size: 28px ;
+    font-weight: bold;
+}
+
 /* End css Self-blog home */
 
 /* Animation xuất hiện của Modal */
