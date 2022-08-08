@@ -17,24 +17,23 @@ app.set('views', path.join(__dirname, 'resources/views'))
 app.use(morgan('combined'))
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('user/home')
+})
+
+app.get('/selfhome', (req, res) => {
+    res.render('user/selfhome')
+})
+
+app.use('/404', (req, res) => {
+    res.render('user/404', { layout: '' })
 })
 
 app.get('/listacc', (req, res) => {
 
-    res.render('listacc')
+    res.render('admin/listacc')
 })
 app.get('/chart', (req, res) => {
-        res.render('chart')
-})
-
-
-app.get('/selfhome', (req, res) => {
-    res.render('selfhome')
-})
-
-app.use('/404', (req, res) => {
-    res.render('404', { layout: '' })
+        res.render('admin/chart')
 })
 
 // app.get('/login', (req, res) => {

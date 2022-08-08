@@ -42,8 +42,18 @@
     <div class="user_avatar">
         <img src="/img/avatar.jPG" alt="" class="avatar-user" id="avatar-user">
         <ul class="subnav subnav-user" id="subnav-user">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -439,6 +449,19 @@
             <div class="dig-footer">
                 <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Hủy</butt>
                 <button class="confirmdig-btn btn-report" id="btnSend">Xác nhận</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="confirmdig confirmdig-hide" id="confirmDialogDeleteBlog">
+        <form id="dialogCont" class="dig-container" action="" method="post">
+            <div class="dig-header">
+                Confirm Deletion
+            </div>
+            <div id="digbody" class="dig-body">Are you sure you want to delete this blog?</div>
+            <div class="dig-footer">
+                <button class="confirmdig-btn btn-delete">Delete</button>
+                <button type="button" class="confirmdig-btn btn-cancel" id="btnCancleDeleteBlog">Cancel</button>
             </div>
         </form>
     </div>

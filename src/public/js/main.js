@@ -99,6 +99,13 @@ $('#btnCancle-create-blog').click(() => {
     }
 })
 
+$('#btnCancleDeleteBlog').click(() => {
+    $('#confirmDialogDeleteBlog').addClass('confirmdig-hide')
+    for (let i = 0; i < more_info_icon.length; i++) {
+        more_info_subnav[i].style.display = 'none';
+    }
+})
+
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";
     if (confirm(text) == true) {
@@ -161,10 +168,17 @@ if(blogContent) {
 
 var editButton = document.getElementsByClassName('edit-button');
 var deleteButton = document.getElementsByClassName('delete-button');
+var confirmDialogDeleteBlog = document.getElementById('confirmDialogDeleteBlog');
 
 for (let i = 0; i < editButton.length; i++) {
     editButton[i].onclick = () => {
         createBlogContainer.classList.remove('confirmdig-hide');
+    }
+}
+
+for (let i = 0; i < deleteButton.length; i++) {
+    deleteButton[i].onclick = () => {
+        confirmDialogDeleteBlog.classList.remove('confirmdig-hide');
     }
 }
 

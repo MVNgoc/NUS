@@ -42,8 +42,18 @@
     <div class="user_avatar">
         <img src="/img/avatar.jPG" alt="" class="avatar-user" id="avatar-user">
         <ul class="subnav subnav-user" id="subnav-user">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -121,8 +131,8 @@
 
             </table>
 
-                <form action="" method="post" class="confirmdig confirmdig-hide" id="confirmDialog">
-                    <div id="dialogCont" class="dig-container">
+                <div class="confirmdig confirmdig-hide" id="confirmDialog">
+                    <form id="dialogCont" class="dig-container" action="" method="post">
                         <div class="dig-header">
                             Confirm Deletion
                         </div>
@@ -131,8 +141,8 @@
                             <button class="confirmdig-btn btn-delete">Delete</button>
                             <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</button>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
 
         </div>
 
