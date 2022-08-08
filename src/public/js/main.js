@@ -85,13 +85,18 @@ var blogName = document.getElementById('blog-name');
 var cataloge = document.getElementById('cataloge');
 var blogContent = document.getElementById('blog-content');
 var checkbox = document.getElementsByClassName('checkbox');
+var btnPost = document.getElementById('btnPost');
 
 $('#btnCancle-create-blog').click(() => {
     createBlogContainer.classList.add('confirmdig-hide');
     blogName.value = '';
-    cataloge.options.selected = true;
+    cataloge.options[0].selected = true;
     blogContent.value = '';
     checkbox[0].checked = false;
+    btnPost.disabled = true;
+    for (let i = 0; i < more_info_icon.length; i++) {
+        more_info_subnav[i].style.display = 'none';
+    }
 })
 
 $('.listAcc_btnaccept').click(() => {
@@ -137,7 +142,6 @@ $('#button_contact').click(() => {
 
 var createBlogInput = document.getElementById('create-blog-input');
 var blogContent = document.getElementById('blog-content');
-var btnPost = document.getElementById('btnPost');
 
 if(createBlogInput) {
     createBlogInput.onclick = () => {
@@ -152,6 +156,15 @@ if(blogContent) {
         } else {
             btnPost.disabled = true;
         }
+    }
+}
+
+var editButton = document.getElementsByClassName('edit-button');
+var deleteButton = document.getElementsByClassName('delete-button');
+
+for (let i = 0; i < editButton.length; i++) {
+    editButton[i].onclick = () => {
+        createBlogContainer.classList.remove('confirmdig-hide');
     }
 }
 
@@ -188,6 +201,7 @@ $('.listAcc_btnaccept').click(() => {
     }
     document.getElementById("demo").innerHTML = text;
 })
+
 var ctx1 = document.getElementById('lineChartPost').getContext('2d');
 var myChart1 = new Chart(ctx1, {
     type: 'line',

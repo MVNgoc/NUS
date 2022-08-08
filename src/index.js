@@ -26,17 +26,15 @@ app.get('/listacc', (req, res) => {
 })
 app.get('/chart', (req, res) => {
         res.render('chart')
-    })
-    // app.get('/404', (req, res) => {
-    //     res.render('404', { layout: '' })
-    // })
-
-app.get('/404', (req, res) => {
-    res.render('404', { layout: '' })
 })
+
 
 app.get('/selfhome', (req, res) => {
     res.render('selfhome')
+})
+
+app.use('/404', (req, res) => {
+    res.render('404', { layout: '' })
 })
 
 // app.get('/login', (req, res) => {

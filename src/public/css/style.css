@@ -367,6 +367,7 @@ section {
     color: rgb(241, 232, 232);
     padding: 10px;
     animation: modalSideslideUp ease .4s;
+    font-weight: bold;
 }
 
 .blog-frame-child .blog-frame-child-introduce-bottom .btn-readmore {
@@ -401,25 +402,33 @@ section {
 
 .blog-frame-child .more-info-subnav {
     position: absolute;
-    background: rgba(228, 211, 187, 0.9);
+    background: #fff;
     top: 44px;
     right: 8px;
     border-radius: 8px;
     list-style: none;
     display: none;
+    overflow: hidden;
 }
 
 .blog-frame-child .more-info-subnav>li>button {
     padding: 4px 10px;
-    border-radius: 8px;
     border: none;
+    min-width: 115px;
+    position: relative;
+}
+
+.blog-frame-child .more-info-subnav .trash-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
 }
 
 .blog-frame-child .more-info-subnav>li>button:focus {
     outline: none;
 }
 
-.blog-frame-child .more-info-subnav:hover>li>button {
+.blog-frame-child .more-info-subnav>li>button:hover {
     cursor: pointer;
     background: #bca27e;
     color: #fff;
@@ -427,6 +436,10 @@ section {
 
 .blog-frame-child .more-info-subnav button {
     color: #000;
+}
+
+.blog-frame-child .more-info-subnav button i {
+    margin-right: 4px;
 }
 
 
@@ -1310,6 +1323,18 @@ section {
     font-size: 28px ;
     font-weight: bold;
 }
+
+.container-content .blog-frame-child-introduce-top .status-edit_time {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+.container-content .status-edit_time .time-update {
+    margin-bottom: 0;
+    margin-right: 6px;
+}
+
 
 /* End css Self-blog home */
 
