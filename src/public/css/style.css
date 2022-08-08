@@ -1045,6 +1045,14 @@ section {
     .create-blog-container .create-blog-form {
         top: 50px;
     }
+
+    .toggle-switch .subnav-user>li:first-child>a {
+        padding: 15px 38px;
+    }
+
+    .toggle-switch .subnav-user>li:last-child>a {
+        padding: 15px 35px;
+    }
 }
 
 
