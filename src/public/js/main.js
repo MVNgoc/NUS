@@ -157,7 +157,6 @@ $('#button_contact').click(() => {
 })
 
 var createBlogInput = document.getElementById('create-blog-input');
-var blogContent = document.getElementById('blog-content');
 
 if(createBlogInput) {
     createBlogInput.onclick = () => {
@@ -165,9 +164,19 @@ if(createBlogInput) {
     }
 }
 
+if(blogName) {
+    blogName.onkeyup = () => {
+        if ((blogName.value != '') && (blogContent.value != '')) {
+            btnPost.disabled = false;
+        } else {
+            btnPost.disabled = true;
+        }
+    }
+}
+
 if(blogContent) {
     blogContent.onkeyup = () => {
-        if (blogContent.value != '') {
+        if ((blogContent.value != '') && (blogName.value != '')) {
             btnPost.disabled = false;
         } else {
             btnPost.disabled = true;
