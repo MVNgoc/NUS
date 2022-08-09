@@ -131,6 +131,7 @@ if(checkboxtextarea) {
 }
 
 var reportButton = document.getElementsByClassName('report-button');
+var btnSend = document.getElementById('btnSend');
 
 for (let i = 0; i < reportButton.length; i++) {
     reportButton[i].onclick = () => {
@@ -139,6 +140,14 @@ for (let i = 0; i < reportButton.length; i++) {
             checkbox[j].checked = false;
             textareareport.disabled = true;
             textareareport.value = '';
+            checkbox[j].onclick = () => {
+                if(checkbox[j].checked) {
+                    btnSend.disabled = false;
+                }
+                else {
+                    btnSend.disabled = true;
+                }
+            }
         }
     }
 } 
