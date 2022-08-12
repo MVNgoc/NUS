@@ -45,6 +45,10 @@ app.get('/reportWriter', (req, res) => {
     res.render('admin/reportWriter')
 })
 
+app.get('/listUser', (req, res) => {
+    res.render('admin/listUser')
+})
+
 // app.get('/login', (req, res) => {
 //   res.render('login', {layout: ''})
 // })

@@ -201,12 +201,19 @@ for (let i = 0; i < deleteButton.length; i++) {
 }
 
 var btnViewReport = document.getElementsByClassName('listAcc_btnViewReport'); 
-
 for (let i = 0; i < btnViewReport.length; i++) {
     btnViewReport[i].onclick = () => {
         confirmDialog.classList.remove('confirmdig-hide');
     }
 }
+
+var btnDeleteUser = document.getElementsByClassName('listAcc_btnDeleteUser');
+for (let i = 0; i < btnDeleteUser.length; i++) {
+    btnDeleteUser[i].onclick = () => {
+        confirmDialog.classList.remove('confirmdig-hide');
+    }
+}
+
 $('#button_contact').click(() => {
     $('#sidebar').css("display", "block");
     $('#button_contact').css("display", "none");
