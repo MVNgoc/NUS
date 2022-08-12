@@ -32,8 +32,13 @@ app.get('/listacc', (req, res) => {
 
     res.render('admin/listacc')
 })
+
 app.get('/chart', (req, res) => {
         res.render('admin/chart')
+})
+
+app.get('/reportPost', (req, res) => {
+    res.render('admin/reportPost')
 })
 
 // app.get('/login', (req, res) => {
