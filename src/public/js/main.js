@@ -119,38 +119,50 @@ $('.listAcc_btnaccept').click(() => {
 var checkboxtextarea = document.getElementById('checkbox-textarea');
 var textareareport = document.getElementById('textarea-report');
 
-if(checkboxtextarea) {
-    checkboxtextarea.onclick = () => {
-        if (checkboxtextarea.checked) {
-            textareareport.disabled = false;
-        } else {
-            textareareport.disabled = true;
-            textareareport.value = '';
-        }
-    }
-}
-
 var reportButton = document.getElementsByClassName('report-button');
 var btnSend = document.getElementById('btnSend');
 
+var temp = 0;
+
 for (let i = 0; i < reportButton.length; i++) {
-    reportButton[i].onclick = () => {
+    reportButton[i].onclick = () => { 
         confirmDialog.classList.remove('confirmdig-hide');
-        for (let j = 0; j < checkbox.length; j++) {
-            checkbox[j].checked = false;
-            textareareport.disabled = true;
+        for (let i = 0; i < checkbox.length; i++) {
+            checkbox[i].checked = false;
             textareareport.value = '';
-            checkbox[j].onclick = () => {
-                if(checkbox[j].checked) {
-                    btnSend.disabled = false;
-                }
-                else {
-                    btnSend.disabled = true;
-                }
-            }
+            textareareport.disabled = true;
+            btnSend.disabled = true;
+            btnSend.style.cursor = 'not-allowed';
         }
     }
 } 
+
+for (let i = 0; i < checkbox.length; i++) { 
+    checkbox[i].onclick = () => {
+        if(checkbox[i].checked) {
+            temp += 1;
+        }
+        else {
+            temp -= 1;
+        }
+        console.log(temp);
+        if(temp > 0) {
+            btnSend.disabled = false;
+            btnSend.style.cursor = 'pointer';
+        }
+        else {
+            btnSend.disabled = true;
+            btnSend.style.cursor = 'not-allowed';
+        }
+        if((checkbox[4].checked) && (!checkbox[i].disabled)) {
+            textareareport.disabled = false;
+        }
+        else {
+            textareareport.value = '';
+            textareareport.disabled = true;
+        }
+    }
+}
 
 $('#button_contact').click(() => {
     $('#sidebar').css("display", "none");
@@ -165,21 +177,27 @@ if(createBlogInput) {
 }
 
 if(blogName) {
+    btnPost.style.cursor = 'not-allowed';
     blogName.onkeyup = () => {
         if ((blogName.value != '') && (blogContent.value != '')) {
             btnPost.disabled = false;
+            btnPost.style.cursor = 'pointer';
         } else {
             btnPost.disabled = true;
+            btnPost.style.cursor = 'not-allowed';
         }
     }
 }
 
 if(blogContent) {
+    btnPost.style.cursor = 'not-allowed';
     blogContent.onkeyup = () => {
         if ((blogContent.value != '') && (blogName.value != '')) {
             btnPost.disabled = false;
+            btnPost.style.cursor = 'pointer';
         } else {
             btnPost.disabled = true;
+            btnPost.style.cursor = 'not-allowed';
         }
     }
 }
