@@ -11,7 +11,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -19,9 +19,9 @@
 <body>
     <nav class="slogan-image-frame navbar navbar-expand-lg navbar-light bg-light sloganAdmin-image-frame">
         <div class="slogan-image"></div>
-        <ul class="editImage_btn">
+        <ul class="editImage_btn" id="editImageAdmin_btn">
             <li>
-                <button type="button" class="report-button"><i class="fa-solid fa-camera"></i>Edit</button>
+                <button type="button" class=""><i class="fa-solid fa-camera"></i>Edit</button>
             </li>
         </ul>
     </nav>
@@ -308,6 +308,71 @@
                 <div id="digbody" class="dig-body">Are you sure you want to remove this blog?</div>
                 <div class="dig-footer">
                     <button class="confirmdig-btn btn-delete">Delete</button>
+                    <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div class="confirmdig confirmdigEditImage confirmdigEditImage-hide" id="confirmDialogEdit">
+            <form id="dialogCont" class="dig_container_AdminImage">
+                <div class="dig-header dig_header_editImage">
+                    Upload image
+                </div>
+                <div id="digbody" class="dig-body">
+                    Image:
+                    <input id="avatar" type="file" name="avatar" value="">
+                </div>
+                <div id="digbody" class="dig-body dig_body_editImage">
+                    <div class="image w3-content w3-display-container">
+                        <div class="sloganAdmin-image-frame">
+                            <img class="mySlides active" src="/img/slogan-image1.jpg" alt="" style="width:100%">
+                            <ul class="editImage_btn" id="editImageAdmin_btn">
+                                <li>
+                                    <button type="button" class=""><i
+                                            class="fa-solid fa-circle-xmark"></i>Delete</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sloganAdmin-image-frame">
+                            <img class="mySlides" src="/img/slogan-image2.jpg" alt="" style="width:100%">
+                            <ul class="editImage_btn" id="editImageAdmin_btn">
+                                <li>
+                                    <button type="button" class=""><i
+                                            class="fa-solid fa-circle-xmark"></i>Delete</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sloganAdmin-image-frame">
+                            <img class="mySlides" src="/img/slogan-image3.jpg" alt="" style="width:100%">
+                            <ul class="editImage_btn" id="editImageAdmin_btn">
+                                <li>
+                                    <button type="button" class=""><i
+                                            class="fa-solid fa-circle-xmark"></i>Delete</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sloganAdmin-image-frame">
+                            <img class="mySlides" src="/img/slogan-image4.jpg" alt="" style="width:100%">
+                            <ul class="editImage_btn" id="editImageAdmin_btn">
+                                <li>
+                                    <button type="button" class=""><i class="fa-solid fa-circle-xmark"></i>Delete</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sloganAdmin-image-frame">
+                            <img class="mySlides" src="/img/slogan-image5.jpg" alt="" style="width:100%">
+                            <ul class="editImage_btn" id="editImageAdmin_btn">
+                                <li>
+                                    <button type="button" class=""><i class="fa-solid fa-circle-xmark"></i>Delete</button>
+                                </li>
+                            </ul>                            
+                        </div>
+                        <button class="w3-button w3-black w3-display-left active"
+                            onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                    </div>
+                </div>
+                <div class="dig-footer">
+                    <button class="confirmdig-btn ">Save</button>
                     <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</button>
                 </div>
             </form>

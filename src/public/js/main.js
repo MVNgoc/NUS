@@ -1,3 +1,20 @@
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+}
 var search_icon = document.getElementById('search-icon');
 var search_hashtag = document.getElementById('search-hashtag');
 var avatar_user = document.getElementById('avatar-user');
@@ -125,7 +142,7 @@ var btnSend = document.getElementById('btnSend');
 var temp = 0;
 
 for (let i = 0; i < reportButton.length; i++) {
-    reportButton[i].onclick = () => { 
+    reportButton[i].onclick = () => {
         confirmDialog.classList.remove('confirmdig-hide');
         for (let i = 0; i < checkbox.length; i++) {
             checkbox[i].checked = false;
@@ -135,29 +152,26 @@ for (let i = 0; i < reportButton.length; i++) {
             btnSend.style.cursor = 'not-allowed';
         }
     }
-} 
+}
 
-for (let i = 0; i < checkbox.length; i++) { 
+for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].onclick = () => {
-        if(checkbox[i].checked) {
+        if (checkbox[i].checked) {
             temp += 1;
-        }
-        else {
+        } else {
             temp -= 1;
         }
         console.log(temp);
-        if(temp > 0) {
+        if (temp > 0) {
             btnSend.disabled = false;
             btnSend.style.cursor = 'pointer';
-        }
-        else {
+        } else {
             btnSend.disabled = true;
             btnSend.style.cursor = 'not-allowed';
         }
-        if((checkbox[4].checked) && (!checkbox[i].disabled)) {
+        if ((checkbox[4].checked) && (!checkbox[i].disabled)) {
             textareareport.disabled = false;
-        }
-        else {
+        } else {
             textareareport.value = '';
             textareareport.disabled = true;
         }
@@ -170,13 +184,13 @@ $('#button_contact').click(() => {
 
 var createBlogInput = document.getElementById('create-blog-input');
 
-if(createBlogInput) {
+if (createBlogInput) {
     createBlogInput.onclick = () => {
         createBlogContainer.classList.remove('confirmdig-hide');
     }
 }
 
-if(blogName) {
+if (blogName) {
     btnPost.style.cursor = 'not-allowed';
     blogName.onkeyup = () => {
         if ((blogName.value != '') && (blogContent.value != '')) {
@@ -189,7 +203,7 @@ if(blogName) {
     }
 }
 
-if(blogContent) {
+if (blogContent) {
     btnPost.style.cursor = 'not-allowed';
     blogContent.onkeyup = () => {
         if ((blogContent.value != '') && (blogName.value != '')) {
@@ -218,7 +232,7 @@ for (let i = 0; i < deleteButton.length; i++) {
     }
 }
 
-var btnViewReport = document.getElementsByClassName('listAcc_btnViewReport'); 
+var btnViewReport = document.getElementsByClassName('listAcc_btnViewReport');
 for (let i = 0; i < btnViewReport.length; i++) {
     btnViewReport[i].onclick = () => {
         confirmDialog.classList.remove('confirmdig-hide');
@@ -255,7 +269,12 @@ $('#btnCanclePopup').click(() => {
 $('.listAcc_btndelete').click(() => {
     $('#confirmDialog').removeClass('confirmdig-hide')
 })
-
+$('#editImageAdmin_btn').click(() => {
+    $('#confirmDialogEdit').removeClass('confirmdigEditImage-hide')
+})
+$('.btn-cancel').click(() => {
+    $('#confirmDialogEdit').addClass('confirmdigEditImage-hide')
+})
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";
     if (confirm(text) == true) {

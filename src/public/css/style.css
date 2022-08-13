@@ -818,6 +818,36 @@ section {
     margin-right: 4px;
 }
 
+.confirmdigEditImage-hide {
+    display: none;
+}
+
+.confirmdigEditImage .dig-container .dig_body_editImage {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.confirmdigEditImage .dig-container .dig_body_editImage .image {
+    flex: 1 1 45rem;
+    border-radius: 7px;
+}
+
+.dig_container_AdminImage {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 800px;
+    background: #fff;
+    padding: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 1px 1px 5px 1px #ccc;
+    border-radius: 10px;
+    opacity: 1;
+    animation: modalSideslideDownPopup ease .5s;
+}
+
 
 /* End css admin */
 
