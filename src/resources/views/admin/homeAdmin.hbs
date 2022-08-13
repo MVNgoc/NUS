@@ -319,7 +319,8 @@
                 </div>
                 <div id="digbody" class="dig-body">
                     Image:
-                    <input id="avatar" type="file" name="avatar" value="">
+                    <input type="file" multiple id="gallery-photo-add">
+                    <div class="gallery"></div>
                 </div>
                 <div id="digbody" class="dig-body dig_body_editImage">
                     <div class="image w3-content w3-display-container">
@@ -362,17 +363,16 @@
                             <img class="mySlides" src="/img/slogan-image5.jpg" alt="" style="width:100%">
                             <ul class="editImage_btn" id="editImageAdmin_btn">
                                 <li>
-                                    <button type="button" class=""><i class="fa-solid fa-circle-xmark"></i>Delete</button>
+                                    <button type="button" class="deleteImageAdmin"><i class="fa-solid fa-circle-xmark"></i>Delete</button>
                                 </li>
                             </ul>                            
                         </div>
-                        <button class="w3-button w3-black w3-display-left active"
-                            onclick="plusDivs(-1)">&#10094;</button>
+                        <button class="w3-button w3-black w3-display-left active" onclick="plusDivs(-1)">&#10094;</button>
                         <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
                     </div>
                 </div>
                 <div class="dig-footer">
-                    <button class="confirmdig-btn ">Save</button>
+                    <button class="confirmdig-btn confirmdig_save_btn">Save</button>
                     <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</button>
                 </div>
             </form>

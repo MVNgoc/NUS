@@ -848,6 +848,11 @@ section {
     animation: modalSideslideDownPopup ease .5s;
 }
 
+.w3-button {
+    transition: 0.6s ease;
+    opacity: 0.5;
+}
+
 
 /* End css admin */
 

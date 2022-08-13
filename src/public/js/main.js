@@ -15,6 +15,30 @@ function showDivs(n) {
     }
     x[slideIndex - 1].style.display = "block";
 }
+// $(function() {
+
+//     var imagesPreview = function(input, placeToInsertImagePreview) {
+
+//         if (input.files) {
+//             var filesAmount = input.files.length;
+
+//             for (i = 0; i < filesAmount; i++) {
+//                 var reader = new FileReader();
+
+//                 reader.onload = function(event) {
+//                     $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+//                 }
+
+//                 reader.readAsDataURL(input.files[i]);
+//             }
+//         }
+
+//     };
+
+//     $('#gallery-photo-add').on('change', function() {
+//         imagesPreview(this, 'div.gallery');
+//     });
+// });
 var search_icon = document.getElementById('search-icon');
 var search_hashtag = document.getElementById('search-hashtag');
 var avatar_user = document.getElementById('avatar-user');
@@ -284,7 +308,24 @@ $('.listAcc_btnaccept').click(() => {
     }
     document.getElementById("demo").innerHTML = text;
 })
-
+$('.deleteImageAdmin').click(() => {
+    let text = "Are you sure you want to remove this image?";
+    if (confirm(text) == true) {
+        text = "You pressed OK!";
+    } else {
+        text = "You canceled!";
+    }
+    document.getElementById("demo").innerHTML = text;
+})
+$('.confirmdig_save_btn').click(() => {
+    let text = "Are you sure?";
+    if (confirm(text) == true) {
+        text = "You pressed OK!";
+    } else {
+        text = "You canceled!";
+    }
+    document.getElementById("demo").innerHTML = text;
+})
 var ctx1 = document.getElementById('lineChartPost').getContext('2d');
 var myChart1 = new Chart(ctx1, {
     type: 'line',
