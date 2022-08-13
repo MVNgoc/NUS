@@ -551,7 +551,7 @@ section {
     top: 300px;
     width: 260px;
     height: calc(100% - 60px);
-    background: rgba(228, 211, 187);
+    background: #faf8cd;
     box-shadow: 0px 5px 10px #000;
     overflow-x: hidden;
     position: fixed;
@@ -861,7 +861,7 @@ section {
 
 .dig-footer button:focus,
 .create-blog-form-footer button:focus {
-    outline: none; 
+    outline: none;
 }
 
 
@@ -1041,19 +1041,15 @@ section {
         width: 12rem;
         height: 3rem;
     }
-
     .new-blog-container .create-blog {
         width: 70% !important;
     }
-
     .create-blog-container .create-blog-form {
         top: 50px;
     }
-
     .toggle-switch .subnav-user>li:first-child>a {
         padding: 15px 38px;
     }
-
     .toggle-switch .subnav-user>li:last-child>a {
         padding: 15px 35px;
     }
@@ -1061,6 +1057,7 @@ section {
 
 
 /* End Tablet and Mobile Responsive */
+
 
 /* Begin Tablet Responsive */
 
@@ -1070,7 +1067,9 @@ section {
     }
 }
 
+
 /* Begin Tablet Responsive */
+
 
 /* Begin Mobile Responsive */
 
@@ -1084,22 +1083,18 @@ section {
     .logo-search .search-icon {
         margin-left: 10px;
     }
-
     .new-blog-container .create-blog {
         padding: 0 12px !important;
         width: 100% !important;
     }
-
     .user-container .user-name {
         left: 140px;
         top: 10px;
         font-size: 24px;
     }
-
     .create-blog-container .create-blog-form {
         width: 360px !important;
     }
-
     .create-blog-container .create-blog-form-body textarea {
         height: 140px !important;
         margin-top: 1px;
@@ -1204,7 +1199,9 @@ section {
     top: 45%;
 }
 
+
 /* End css popup Report */
+
 
 /* Begin css Self-blog home */
 
@@ -1258,7 +1255,7 @@ section {
 }
 
 .create-blog-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -1295,9 +1292,9 @@ section {
     font-weight: bold;
 }
 
-.create-blog-container .create-blog-form-body > input,
-.create-blog-container .create-blog-form-body > select,
-.create-blog-container .create-blog-form-body > textarea {
+.create-blog-container .create-blog-form-body>input,
+.create-blog-container .create-blog-form-body>select,
+.create-blog-container .create-blog-form-body>textarea {
     display: block;
     width: 100%;
     height: 40px;
@@ -1342,7 +1339,7 @@ section {
     position: absolute;
     left: 160px;
     top: 12px;
-    font-size: 28px ;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -1357,7 +1354,9 @@ section {
     margin-right: 6px;
 }
 
+
 /* End css Self-blog home */
+
 
 /* Begin css reportWriter */
 
@@ -1373,7 +1372,6 @@ section {
     flex-direction: column;
     align-items: center;
     margin: 16px 0;
-
 }
 
 #listAcc #digbody .reporter-name,
@@ -1388,7 +1386,10 @@ section {
     align-items: center;
     text-align: center;
 }
+
+
 /* End css reportWriter */
+
 
 /* Animation xuất hiện của Modal */
 
