@@ -24,17 +24,20 @@ app.get('/selfhome', (req, res) => {
     res.render('user/selfhome')
 })
 
-app.use('/404', (req, res) => {
-    res.render('user/404', { layout: '' })
-})
+// app.use('/404', (req, res) => {
+//     res.render('user/404', { layout: '' })
+// })
+app.get('/homeAdmin', (req, res) => {
 
+    res.render('admin/homeAdmin', { layout: '' })
+})
 app.get('/listacc', (req, res) => {
 
     res.render('admin/listacc')
 })
 
 app.get('/chart', (req, res) => {
-        res.render('admin/chart')
+    res.render('admin/chart')
 })
 
 app.get('/reportPost', (req, res) => {

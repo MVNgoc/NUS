@@ -781,6 +781,47 @@ section {
 /* End css chart*/
 
 
+/* Begin css admin */
+
+.sloganAdmin-image-frame .editImage_btn {
+    position: absolute;
+    background: #fff;
+    top: 10px;
+    right: 8px;
+    border-radius: 8px;
+    list-style: none;
+    overflow: hidden;
+}
+
+.sloganAdmin-image-frame .editImage_btn>li>button {
+    padding: 4px 10px;
+    border: none;
+    min-width: 115px;
+    position: relative;
+}
+
+.sloganAdmin-image-frame .editImage_btn>li>button:focus {
+    outline: none;
+}
+
+.sloganAdmin-image-frame .editImage_btn>li>button:hover {
+    cursor: pointer;
+    background: #bca27e;
+    color: #fff;
+}
+
+.sloganAdmin-image-frame .editImage_btn button {
+    color: #000;
+}
+
+.sloganAdmin-image-frame .editImage_btn button i {
+    margin-right: 4px;
+}
+
+
+/* End css admin */
+
+
 /* Begin css dialog*/
 
 .confirmdig-hide {
