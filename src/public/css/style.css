@@ -866,6 +866,60 @@ section {
     opacity: 0.5;
 }
 
+.btn_editNavAd {
+    font-size: 18px;
+}
+
+.btn_saveNavAd_hide {
+    display: none;
+}
+
+.btn_saveNavAd {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn_editNavAd:hover {
+    color: #bca27e;
+    cursor: pointer;
+}
+
+.btn_saveNavAd:hover {
+    color: #bca27e;
+    cursor: pointer;
+}
+
+.icon_edit_nav {
+    position: absolute;
+    background: #fff;
+    top: 10px;
+    right: 8px;
+    border-radius: 8px;
+    list-style: none;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.icon_edit_nav:hover {
+    cursor: pointer;
+    color: #eee;
+}
+
+.btn_add_navAd {
+    border: 5px solid #bca27e;
+}
+
+.icon_edit_nav_hide {
+    display: none;
+}
+
+.toggle-switch #nav .btn_add_navAd_hide {
+    position: relative;
+    display: none;
+    text-align: center;
+}
+
 
 /* End css admin */
 

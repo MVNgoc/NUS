@@ -258,6 +258,16 @@ $('#editImageAdmin_btn').click(() => {
 $('.btn-cancel').click(() => {
     $('#confirmDialogEdit').addClass('confirmdigEditImage-hide')
 })
+$('.btn_editNavAd').click(() => {
+    $('.icon_edit_nav').removeClass('icon_edit_nav_hide')
+    $('.btn_add_navAd').removeClass('btn_add_navAd_hide')
+    $('.btn_saveNavAd').removeClass('btn_saveNavAd_hide')
+})
+$('.btn_saveNavAd').click(() => {
+    $('.icon_edit_nav').addClass('icon_edit_nav_hide')
+    $('.btn_add_navAd').addClass('btn_add_navAd_hide')
+    $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
+})
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";
     if (confirm(text) == true) {
