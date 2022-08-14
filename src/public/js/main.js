@@ -1,44 +1,3 @@
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = x.length }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex - 1].style.display = "block";
-}
-// $(function() {
-
-//     var imagesPreview = function(input, placeToInsertImagePreview) {
-
-//         if (input.files) {
-//             var filesAmount = input.files.length;
-
-//             for (i = 0; i < filesAmount; i++) {
-//                 var reader = new FileReader();
-
-//                 reader.onload = function(event) {
-//                     $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-//                 }
-
-//                 reader.readAsDataURL(input.files[i]);
-//             }
-//         }
-
-//     };
-
-//     $('#gallery-photo-add').on('change', function() {
-//         imagesPreview(this, 'div.gallery');
-//     });
-// });
 var search_icon = document.getElementById('search-icon');
 var search_hashtag = document.getElementById('search-hashtag');
 var avatar_user = document.getElementById('avatar-user');
@@ -326,6 +285,47 @@ $('.confirmdig_save_btn').click(() => {
     }
     document.getElementById("demo").innerHTML = text;
 })
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+    showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+}
+// $(function() {
+
+//     var imagesPreview = function(input, placeToInsertImagePreview) {
+
+//         if (input.files) {
+//             var filesAmount = input.files.length;
+
+//             for (i = 0; i < filesAmount; i++) {
+//                 var reader = new FileReader();
+
+//                 reader.onload = function(event) {
+//                     $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+//                 }
+
+//                 reader.readAsDataURL(input.files[i]);
+//             }
+//         }
+
+//     };
+
+//     $('#gallery-photo-add').on('change', function() {
+//         imagesPreview(this, 'div.gallery');
+//     });
+// });
 var ctx1 = document.getElementById('lineChartPost').getContext('2d');
 var myChart1 = new Chart(ctx1, {
     type: 'line',
