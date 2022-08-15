@@ -675,7 +675,7 @@ section {
 .charts_user {
     grid-gap: 20px;
     width: 100%;
-    padding: 400px;
+    padding: 300px;
     padding-top: 0;
     padding-bottom: 10px;
     border-radius: 10px;
@@ -775,7 +775,7 @@ section {
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    width: 100%;
+    width: 80%;
     height: auto;
     background: #fff;
     padding: 10px;
