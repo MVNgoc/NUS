@@ -268,6 +268,25 @@ $('.btn_saveNavAd').click(() => {
     $('.btn_add_navAd').addClass('btn_add_navAd_hide')
     $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
 })
+
+function add_nav_btn(add_cata_nav_btn) {
+    $(add_cata_nav_btn).parent().append(`<li><a href="#">Cataloge A.n</a><i class="fa-solid fa-circle-xmark icon_edit_nav"></i></li>
+    <li type="button" class="btn_add_navAd" id="btn_add_navAd" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`);
+    $(add_cata_nav_btn).remove();
+}
+
+function addBig_nav_btn(add_cata_nav_btn) {
+    $(add_cata_nav_btn).parent().append(`<li>
+                                            <a href="#">
+                                                Cataloge N
+                                            </a>
+                                            <i id="icon_edit_nav" class="fa-solid fa-circle-xmark icon_edit_nav"></i>
+                                        </li>
+                                        <li class="btn_add_navAd" onclick="addBig_nav_btn(this)">
+                                            <a href="#">Add</a>
+                                        </li>`);
+    $(add_cata_nav_btn).remove();
+}
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";
     if (confirm(text) == true) {
