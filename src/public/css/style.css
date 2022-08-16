@@ -906,6 +906,18 @@ section {
     color: #eee;
 }
 
+.subnav {
+    width: 100%;
+}
+
+.subnav .btn_add_navAd a {
+    width: 100%;
+}
+
+.subnav .btn_add_navAd {
+    width: 100%;
+}
+
 .btn_add_navAd:hover {
     box-shadow: 0px 5px 10px #000;
 }
@@ -931,6 +943,7 @@ section {
 
 .form-input-admin:hover {
     color: white;
+    cursor: pointer;
 }
 
 
