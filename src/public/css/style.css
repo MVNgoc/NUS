@@ -920,6 +920,19 @@ section {
     text-align: center;
 }
 
+.form-input-admin {
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: black;
+    flex-grow: 1;
+    width: 100px;
+}
+
+.form-input-admin:hover {
+    color: white;
+}
+
 
 /* End css admin */
 
