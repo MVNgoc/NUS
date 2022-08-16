@@ -906,8 +906,8 @@ section {
     color: #eee;
 }
 
-.btn_add_navAd {
-    border: 5px solid #bca27e;
+.btn_add_navAd:hover {
+    box-shadow: 0px 5px 10px #000;
 }
 
 .icon_edit_nav_hide {
