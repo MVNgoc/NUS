@@ -16,6 +16,7 @@ search_icon.onclick = () => {
 
 avatar_user.onclick = (e) => {
     subnav_user.style.display = 'block';
+    avatar_user.style.marginLeft = '111px';
     e.stopPropagation();
 }
 
@@ -31,6 +32,7 @@ back_icon.onclick = () => {
 }
 
 var toggle_switch = document.getElementById('toggle-switch');
+var nav_admin = document.getElementById('nav-admin');
 var nav = document.getElementById('nav');
 var heightHeader = toggle_switch.clientHeight;
 
@@ -39,10 +41,12 @@ more_icon.onclick = () => {
     if (isClose) {
         toggle_switch.style.height = 'auto';
         nav.style.display = 'flex';
+        nav_admin.style.display = 'flex';
         avatar_user.style.left = '392px';
         subnav_user.style.left = '288px';
     } else {
         toggle_switch.style.height = null;
+        nav_admin.style.display = 'none';
         nav.style.display = 'none';
         avatar_user.style.left = '570px';
         subnav_user.style.left = '468px';
@@ -323,9 +327,9 @@ arrayNav.forEach((element, index) => {
 
         tmp += `<ul class="subnav"><li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li></ul></li>`
     }
-    $('#nav').append(tmp);
+    $('#nav-admin').append(tmp);
     if (index == arrayNav.length - 1) {
-        $('#nav').append(`<li class="btn_add_navAd btn_add_navAd_hide" onclick="addBig_nav_btn(this)">
+        $('#nav-admin').append(`<li class="btn_add_navAd btn_add_navAd_hide" onclick="addBig_nav_btn(this)">
                                 <a href="#">Add</a>
                             </li>`)
     }
