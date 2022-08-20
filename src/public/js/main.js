@@ -290,49 +290,16 @@ function addBig_nav_btn(add_cata_nav_btn) {
 }
 
 let arrayNav = [{
-        name: 'cataloge A',
-        child: ['cataloge A.1', 'cateloge A.2', 'cateloge A.3']
-    }, {
-        name: 'cataloge B',
-        child: ['cataloge B.2', 'cateloge B.2', 'cateloge B.3']
-    }, {
-        name: 'cataloge C',
-        child: []
-    }]
-    // let copy_array_nav_admin = arrayNav;
-    // copy_array_nav_admin.forEach((element, index) => {
-    //     let tmp = `<li>
-    //     <a href="#"> 
-    //         <input disabled value="${element.name}" type="text" class="form-input form-input-admin" id="" placeholder="" name="">
-    //         <i class="arrow down"></i>
-    //     </a>
-    //     <i id="icon_edit_nav" class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i>`
-    //     if (element.child.length > 0) {
-    //         let tmp2 = '<ul class="subnav">'
-    //         element.child.forEach((item, index2) => {
-    //             tmp2 += `<li><a href="#"><input disabled value="${item}" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i
-    //             class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i></li>`
-    //             if (index2 == element.child.length - 1) {
-    //                 tmp2 += `
-    //                 <li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`
-    //             }
-    //         });
-    //         tmp2 += `</ul>
-    //         </li>`
-    //         tmp += tmp2
+    name: 'cataloge A',
+    child: ['cataloge A.1', 'cateloge A.2', 'cateloge A.3']
+}, {
+    name: 'cataloge B',
+    child: ['cataloge B.2', 'cateloge B.2', 'cateloge B.3']
+}, {
+    name: 'cataloge C',
+    child: []
+}]
 
-//     } else {
-
-//         tmp += `<ul class="subnav"><li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li></ul></li>`
-//     }
-//     $('#nav-admin').append(tmp);
-//     if (index == copy_array_nav_admin.length - 1) {
-//         $('#nav-admin').append(`<li class="btn_add_navAd btn_add_navAd_hide" onclick="addBig_nav_btn(this)">
-//                                 <a href="#">Add</a>
-//                             </li>`)
-//     }
-
-// });
 
 function confirm_nav_edit() {
     let copy_array_nav_admin = arrayNav;
@@ -376,24 +343,12 @@ function confirm_nav_edit() {
 
 }
 confirm_nav_edit()
-    // $('.btn_saveNavAd').click(() => {
-    //     let text = "Are you sure?";
-    //     if (confirm(text) == true) {
-    //         $('.icon_edit_nav').addClass('icon_edit_nav_hide')
-    //         $('.btn_add_navAd').addClass('btn_add_navAd_hide')
-    //         $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
-    //         $('.form-input-admin').attr('disabled', 'disabled');
-    //         text = "You pressed OK!";
-    //     } else {
-    //         confirm_nav_edit()
-    //         text = "You canceled!";
-    //     }
-    //     document.getElementById("demo").innerHTML = text;
-    // })
+
 
 function click_btn_saveNavAd() {
     let text = "Are you sure?";
     if (confirm(text) == true) {
+
         $('.icon_edit_nav').addClass('icon_edit_nav_hide')
         $('.btn_add_navAd').addClass('btn_add_navAd_hide')
         $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
@@ -456,30 +411,7 @@ function showDivs(n) {
     }
     x[slideIndex - 1].style.display = "block";
 }
-// $(function() {
 
-//     var imagesPreview = function(input, placeToInsertImagePreview) {
-
-//         if (input.files) {
-//             var filesAmount = input.files.length;
-
-//             for (i = 0; i < filesAmount; i++) {
-//                 var reader = new FileReader();
-
-//                 reader.onload = function(event) {
-//                     $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-//                 }
-
-//                 reader.readAsDataURL(input.files[i]);
-//             }
-//         }
-
-//     };
-
-//     $('#gallery-photo-add').on('change', function() {
-//         imagesPreview(this, 'div.gallery');
-//     });
-// });
 var ctx1 = document.getElementById('lineChartPost').getContext('2d');
 var myChart1 = new Chart(ctx1, {
     type: 'line',
