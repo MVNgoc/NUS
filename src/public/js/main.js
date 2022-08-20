@@ -77,11 +77,17 @@ $('.listAcc_btndelete').click(() => {
 })
 
 var confirmDialog = document.getElementById('confirmDialog');
+var confirmDialog_viewReport = document.getElementById('confirmDialog-viewReport');
 $('#btnCancle').click(() => {
     $('#confirmDialog').addClass('confirmdig-hide')
     for (let i = 0; i < more_info_icon.length; i++) {
         more_info_subnav[i].style.display = 'none';
     }
+})
+
+$('#btnCancle-viewReport').click(() => {
+    console.log('cancel');
+    $('#confirmDialog-viewReport').addClass('confirmdig-hide')
 })
 
 var createBlogContainer = document.getElementById('create-blog-container');
@@ -222,7 +228,7 @@ for (let i = 0; i < deleteButton.length; i++) {
 var btnViewReport = document.getElementsByClassName('listAcc_btnViewReport');
 for (let i = 0; i < btnViewReport.length; i++) {
     btnViewReport[i].onclick = () => {
-        confirmDialog.classList.remove('confirmdig-hide');
+        confirmDialog_viewReport.classList.remove('confirmdig-hide');
     }
 }
 

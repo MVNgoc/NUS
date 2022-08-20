@@ -75,7 +75,8 @@
                 <td class="listAcc-td">Lê Việt Tân</td>
                 <td class="listAcc-td">03/08/1993</td>
                 <td class="listAcc-td">
-                    <button class="listAcc-btn listAcc_btnViewReport">Xem</button>
+                    <button class="listAcc-btn listAcc_btnViewReport"><i class="fa-solid fa-eye"></i></button>
+                    <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                 </td>
             </tr>
             <tr class="listAcc-tr">
@@ -84,7 +85,8 @@
                 <td class="listAcc-td">Lê Việt Tân</td>
                 <td class="listAcc-td">03/08/1993</td>
                 <td class="listAcc-td">
-                    <button class="listAcc-btn listAcc_btnViewReport">Xem</button>
+                    <button class="listAcc-btn listAcc_btnViewReport"><i class="fa-solid fa-eye"></i></button>
+                    <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                 </td>
             </tr>
             <tr class="listAcc-tr">
@@ -93,7 +95,8 @@
                 <td class="listAcc-td">Lê Việt Tân</td>
                 <td class="listAcc-td">03/08/1993</td>
                 <td class="listAcc-td">
-                    <button class="listAcc-btn listAcc_btnViewReport">Xem</button>
+                    <button class="listAcc-btn listAcc_btnViewReport"><i class="fa-solid fa-eye"></i></button>
+                    <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                 </td>
             </tr>
             <tr class="listAcc-tr">
@@ -102,7 +105,8 @@
                 <td class="listAcc-td">Lê Việt Tân</td>
                 <td class="listAcc-td">03/08/1993</td>
                 <td class="listAcc-td">
-                    <button class="listAcc-btn listAcc_btnViewReport">Xem</button>
+                    <button class="listAcc-btn listAcc_btnViewReport"><i class="fa-solid fa-eye"></i></button>
+                    <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                 </td>
             </tr>
             <tr class="listAcc-tr">
@@ -111,13 +115,14 @@
                 <td class="listAcc-td">Lê Việt Tân</td>
                 <td class="listAcc-td">03/08/1993</td>
                 <td class="listAcc-td">
-                    <button class="listAcc-btn listAcc_btnViewReport">Xem</button>
+                    <button class="listAcc-btn listAcc_btnViewReport"><i class="fa-solid fa-eye"></i></button>
+                    <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
                 </td>
             </tr>
         </table>
     </div>
 
-    <div class="confirmdig confirmdig-hide" id="confirmDialog">
+    <div class="confirmdig confirmdig-hide" id="confirmDialog-viewReport">
         <form id="dialogCont" class="dig-container" action="" method="post">
             <div class="dig-header">
                 Chi tiết
@@ -146,7 +151,20 @@
             </div>
 
             <div class="dig-footer">
-                <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Thoát</butt>
+                <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle-viewReport">Thoát</butt>
+            </div>
+        </form>
+    </div>
+
+    <div class="confirmdig confirmdig-hide" id="confirmDialog">
+        <form id="dialogCont" class="dig-container" action="" method="post">
+            <div class="dig-header">
+                Confirm Deletion
+            </div>
+            <div id="digbody" class="dig-body">Are you sure you want to remove this report?</div>
+            <div class="dig-footer">
+                <button class="confirmdig-btn btn-delete">Delete</button>
+                <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</button>
             </div>
         </form>
     </div>

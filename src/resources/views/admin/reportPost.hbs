@@ -69,6 +69,7 @@
                     <th class="listAcc-th">Bài viết bị report</th>
                     <th class="listAcc-th">Lý do</th>
                     <th class="listAcc-th">Thời gian</th>
+                    <th class="listAcc-th">Action</th>
                 </tr>
                 <tr class="listAcc-tr">
                     <td class="listAcc-td">1</td>
@@ -77,6 +78,9 @@
                     <td class="listAcc-td">Một số cảnh bình minh tuyệt đẹp trên biển. </td>
                     <td class="listAcc-td">Người dùng ảo, Spam</td>
                     <td class="listAcc-td">03/08/1993</td>
+                    <td class="listAcc-td">
+                        <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
                 </tr>
                 <tr class="listAcc-tr">
                     <td class="listAcc-td">2</td>
@@ -85,6 +89,9 @@
                     <td class="listAcc-td">Một số cảnh bình minh tuyệt đẹp trên biển. </td>
                     <td class="listAcc-td">Người dùng ảo, Spam</td>
                     <td class="listAcc-td">03/08/1993</td>
+                    <td class="listAcc-td">
+                        <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
                 </tr>
                 <tr class="listAcc-tr">
                     <td class="listAcc-td">3</td>
@@ -93,6 +100,9 @@
                     <td class="listAcc-td">Một số cảnh bình minh tuyệt đẹp trên biển. </td>
                     <td class="listAcc-td">Người dùng ảo, Spam</td>
                     <td class="listAcc-td">03/08/1993</td>
+                    <td class="listAcc-td">
+                        <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
                 </tr>
                 <tr class="listAcc-tr">
                     <td class="listAcc-td">4</td>
@@ -101,6 +111,9 @@
                     <td class="listAcc-td">Một số cảnh bình minh tuyệt đẹp trên biển. </td>
                     <td class="listAcc-td">Người dùng ảo, Spam</td>
                     <td class="listAcc-td">03/08/1993</td>
+                    <td class="listAcc-td">
+                        <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
                 </tr>
                 <tr class="listAcc-tr">
                     <td class="listAcc-td">5</td>
@@ -109,7 +122,24 @@
                     <td class="listAcc-td">Một số cảnh bình minh tuyệt đẹp trên biển. </td>
                     <td class="listAcc-td">Người dùng ảo, Spam</td>
                     <td class="listAcc-td">03/08/1993</td>
+                    <td class="listAcc-td">
+                        <button class="listAcc-btn listAcc_btndelete" id="listAcc_btndelete"><i class="fa-solid fa-trash"></i></button>
+                    </td>
                 </tr>
             </table>
+
+            <div class="confirmdig confirmdig-hide" id="confirmDialog">
+                <form id="dialogCont" class="dig-container" action="" method="post">
+                    <div class="dig-header">
+                        Confirm Deletion
+                    </div>
+                    <div id="digbody" class="dig-body">Are you sure you want to remove this report?</div>
+                    <div class="dig-footer">
+                        <button class="confirmdig-btn btn-delete">Delete</button>
+                        <button type="button" class="confirmdig-btn btn-cancel" id="btnCancle">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </section>
