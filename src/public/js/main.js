@@ -268,18 +268,9 @@ $('#editImageAdmin_btn').click(() => {
 $('.btn-cancel').click(() => {
     $('#confirmDialogEdit').addClass('confirmdigEditImage-hide')
 })
-$('.btn_editNavAd').click(() => {
-    $('.icon_edit_nav').removeClass('icon_edit_nav_hide')
-    $('.btn_add_navAd').removeClass('btn_add_navAd_hide')
-    $('.btn_saveNavAd').removeClass('btn_saveNavAd_hide')
-    $('.form-input-admin').removeAttr('disabled');
-})
-$('.btn_saveNavAd').click(() => {
-    $('.icon_edit_nav').addClass('icon_edit_nav_hide')
-    $('.btn_add_navAd').addClass('btn_add_navAd_hide')
-    $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
-    $('.form-input-admin').attr('disabled', 'disabled');
-})
+
+
+
 
 function add_nav_btn(add_cata_nav_btn) {
     $(add_cata_nav_btn).parent().append(`<li><a href="#"><input value="Cataloge N.n" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i class="fa-solid fa-circle-xmark icon_edit_nav"></i></li>
@@ -299,50 +290,128 @@ function addBig_nav_btn(add_cata_nav_btn) {
 }
 
 let arrayNav = [{
-    name: 'cataloge A',
-    child: ['cataloge A.1', 'cateloge A.2', 'cateloge A.3']
-}, {
-    name: 'cataloge B',
-    child: ['cataloge B.2', 'cateloge B.2', 'cateloge B.3']
-}, {
-    name: 'cataloge C',
-    child: []
-}]
-arrayNav.forEach((element, index) => {
-    let tmp = `<li>
-    <a href="#"> 
-        <input disabled value="${element.name}" type="text" class="form-input form-input-admin" id="" placeholder="" name="">
-        <i class="arrow down"></i>
-    </a>
-    <i id="icon_edit_nav" class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i>`
-    if (element.child.length > 0) {
-        let tmp2 = '<ul class="subnav">'
-        element.child.forEach((item, index2) => {
-            tmp2 += `<li><a href="#"><input disabled value="${item}" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i
-            class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i></li>`
-            if (index2 == element.child.length - 1) {
-                tmp2 += `
-                <li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`
-            }
-        });
-        tmp2 += `</ul>
-        </li>`
-        tmp += tmp2
+        name: 'cataloge A',
+        child: ['cataloge A.1', 'cateloge A.2', 'cateloge A.3']
+    }, {
+        name: 'cataloge B',
+        child: ['cataloge B.2', 'cateloge B.2', 'cateloge B.3']
+    }, {
+        name: 'cataloge C',
+        child: []
+    }]
+    // let copy_array_nav_admin = arrayNav;
+    // copy_array_nav_admin.forEach((element, index) => {
+    //     let tmp = `<li>
+    //     <a href="#"> 
+    //         <input disabled value="${element.name}" type="text" class="form-input form-input-admin" id="" placeholder="" name="">
+    //         <i class="arrow down"></i>
+    //     </a>
+    //     <i id="icon_edit_nav" class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i>`
+    //     if (element.child.length > 0) {
+    //         let tmp2 = '<ul class="subnav">'
+    //         element.child.forEach((item, index2) => {
+    //             tmp2 += `<li><a href="#"><input disabled value="${item}" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i
+    //             class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i></li>`
+    //             if (index2 == element.child.length - 1) {
+    //                 tmp2 += `
+    //                 <li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`
+    //             }
+    //         });
+    //         tmp2 += `</ul>
+    //         </li>`
+    //         tmp += tmp2
 
+//     } else {
+
+//         tmp += `<ul class="subnav"><li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li></ul></li>`
+//     }
+//     $('#nav-admin').append(tmp);
+//     if (index == copy_array_nav_admin.length - 1) {
+//         $('#nav-admin').append(`<li class="btn_add_navAd btn_add_navAd_hide" onclick="addBig_nav_btn(this)">
+//                                 <a href="#">Add</a>
+//                             </li>`)
+//     }
+
+// });
+
+function confirm_nav_edit() {
+    let copy_array_nav_admin = arrayNav;
+    $('#nav-admin').html(`<i onclick='click_btn_editNavAd()' class="fa-solid fa-gear btn_editNavAd"></i>
+    <i onclick='click_btn_saveNavAd()' class="fa-solid fa-check btn_saveNavAd btn_saveNavAd_hide"></i>
+    <li><a href="#">All</a><i id="icon_edit_nav"
+    class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i></li>`)
+    copy_array_nav_admin.forEach((element, index) => {
+        let tmp = `<li>
+        <a href="#"> 
+            <input disabled value="${element.name}" type="text" class="form-input form-input-admin" id="" placeholder="" name="">
+            <i class="arrow down"></i>
+        </a>
+        <i id="icon_edit_nav" class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i>`
+        if (element.child.length > 0) {
+            let tmp2 = '<ul class="subnav">'
+            element.child.forEach((item, index2) => {
+                tmp2 += `<li><a href="#"><input disabled value="${item}" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i
+                class="fa-solid fa-circle-xmark icon_edit_nav icon_edit_nav_hide"></i></li>`
+                if (index2 == element.child.length - 1) {
+                    tmp2 += `
+                    <li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`
+                }
+            });
+            tmp2 += `</ul>
+            </li>`
+            tmp += tmp2
+
+        } else {
+
+            tmp += `<ul class="subnav"><li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li></ul></li>`
+        }
+        $('#nav-admin').append(tmp);
+        if (index == copy_array_nav_admin.length - 1) {
+            $('#nav-admin').append(`<li class="btn_add_navAd btn_add_navAd_hide" onclick="addBig_nav_btn(this)">
+                                    <a href="#">Add</a>
+                                </li>`)
+        }
+
+    });
+
+}
+confirm_nav_edit()
+    // $('.btn_saveNavAd').click(() => {
+    //     let text = "Are you sure?";
+    //     if (confirm(text) == true) {
+    //         $('.icon_edit_nav').addClass('icon_edit_nav_hide')
+    //         $('.btn_add_navAd').addClass('btn_add_navAd_hide')
+    //         $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
+    //         $('.form-input-admin').attr('disabled', 'disabled');
+    //         text = "You pressed OK!";
+    //     } else {
+    //         confirm_nav_edit()
+    //         text = "You canceled!";
+    //     }
+    //     document.getElementById("demo").innerHTML = text;
+    // })
+
+function click_btn_saveNavAd() {
+    let text = "Are you sure?";
+    if (confirm(text) == true) {
+        $('.icon_edit_nav').addClass('icon_edit_nav_hide')
+        $('.btn_add_navAd').addClass('btn_add_navAd_hide')
+        $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
+        $('.form-input-admin').attr('disabled', 'disabled');
+        text = "You pressed OK!";
     } else {
-
-        tmp += `<ul class="subnav"><li type="button" class="btn_add_navAd btn_add_navAd_hide" onclick="add_nav_btn(this)"><a href="#">Add</a></li></ul></li>`
+        confirm_nav_edit()
+        text = "You canceled!";
     }
-    $('#nav-admin').append(tmp);
-    if (index == arrayNav.length - 1) {
-        $('#nav-admin').append(`<li class="btn_add_navAd btn_add_navAd_hide" onclick="addBig_nav_btn(this)">
-                                <a href="#">Add</a>
-                            </li>`)
-    }
+    document.getElementById("demo").innerHTML = text;
+}
 
-});
-
-
+function click_btn_editNavAd() {
+    $('.icon_edit_nav').removeClass('icon_edit_nav_hide')
+    $('.btn_add_navAd').removeClass('btn_add_navAd_hide')
+    $('.btn_saveNavAd').removeClass('btn_saveNavAd_hide')
+    $('.form-input-admin').removeAttr('disabled');
+}
 $('.listAcc_btnaccept').click(() => {
     let text = "This account has been approved!";
     if (confirm(text) == true) {
