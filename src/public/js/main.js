@@ -269,26 +269,6 @@ $('.btn-cancel').click(() => {
     $('#confirmDialogEdit').addClass('confirmdigEditImage-hide')
 })
 
-
-
-
-function add_nav_btn(add_cata_nav_btn) {
-    $(add_cata_nav_btn).parent().append(`<li><a href="#"><input value="Cataloge N.n" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i class="fa-solid fa-circle-xmark icon_edit_nav"></i></li>
-    <li type="button" class="btn_add_navAd" id="btn_add_navAd" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`);
-    $(add_cata_nav_btn).remove();
-}
-
-function addBig_nav_btn(add_cata_nav_btn) {
-    $(add_cata_nav_btn).parent().append(`<li><a href="#"> 
-                                                <input value="Cataoge N" type="text" class="form-input form-input-admin" id="" placeholder="" name="">
-                                                <i class="arrow down"></i>
-                                        </a></li>
-                                        <li class="btn_add_navAd" onclick="addBig_nav_btn(this)">
-                                            <a href="#">Add</a>
-                                        </li>`);
-    $(add_cata_nav_btn).remove();
-}
-
 let arrayNav = [{
     name: 'cataloge A',
     child: ['cataloge A.1', 'cateloge A.2', 'cateloge A.3']
@@ -300,6 +280,36 @@ let arrayNav = [{
     child: []
 }]
 
+
+function add_nav_btn(add_cata_nav_btn) {
+    /* let current = $(add_cata_nav_btn).parent().parent()[0].children[0].children[0].value */
+
+    $(add_cata_nav_btn).parent().append(`<li><a href="#"><input value="Cataloge N.n" type="text" class="form-input form-input-admin" id="" placeholder="" name=""></a><i class="fa-solid fa-circle-xmark icon_edit_nav"></i></li>
+    <li type="button" class="btn_add_navAd" id="btn_add_navAd" onclick="add_nav_btn(this)"><a href="#">Add</a></li>`);
+
+    /*     newArr.arr.forEach(item => {
+            if (item.name == current) {
+                item.child.push('Cataloge N.n')
+            }
+        }); */
+
+    $(add_cata_nav_btn).remove();
+}
+
+function addBig_nav_btn(add_cata_nav_btn) {
+    $(add_cata_nav_btn).parent().append(`<li><a href="#"> 
+                                                <input value="Cataoge N" type="text" class="form-input form-input-admin" id="" placeholder="" name="">
+                                                <i class="arrow down"></i>
+                                        </a></li>
+                                        <li class="btn_add_navAd" onclick="addBig_nav_btn(this)">
+                                            <a href="#">Add</a>
+                                        </li>`);
+    /*     newArr.arr.push({
+            name: 'cataloge N',
+            child: []
+        }) */
+    $(add_cata_nav_btn).remove();
+}
 
 function confirm_nav_edit() {
     let copy_array_nav_admin = arrayNav;
@@ -348,17 +358,21 @@ confirm_nav_edit()
 function click_btn_saveNavAd() {
     let text = "Are you sure?";
     if (confirm(text) == true) {
-
+        console.log('true')
         $('.icon_edit_nav').addClass('icon_edit_nav_hide')
         $('.btn_add_navAd').addClass('btn_add_navAd_hide')
         $('.btn_saveNavAd').addClass('btn_saveNavAd_hide')
         $('.form-input-admin').attr('disabled', 'disabled');
         text = "You pressed OK!";
+        //arrayNav = [].concat(newArr.arr);
+        confirm_nav_edit();
     } else {
-        confirm_nav_edit()
+        console.log('false');
+        /* newArr.arr = [].concat(arrayNav); */
         text = "You canceled!";
+        confirm_nav_edit();
     }
-    document.getElementById("demo").innerHTML = text;
+
 }
 
 function click_btn_editNavAd() {
